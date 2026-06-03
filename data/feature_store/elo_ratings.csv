@@ -1,0 +1,291 @@
+team,elo_rating
+Aden,1443.756
+Afghanistan,1250.731
+Albania,1630.742
+Algeria,1792.404
+Andorra,1184.88
+Angola,1602.854
+Anguilla,1121.716
+Antigua and Barbuda,1251.883
+Argentina,2039.657
+Armenia,1444.25
+Aruba,1254.864
+Australia,1808.278
+Austria,1802.011
+Azerbaijan,1426.51
+Bahamas,1126.94
+Bahrain,1539.528
+Bangladesh,1212.299
+Barbados,1226.14
+Belarus,1519.092
+Belgian Congo,1485.73
+Belgium,1842.695
+Belize,1325.976
+Benin,1526.038
+Bermuda,1357.892
+Bhutan,1013.759
+Bohemia,1477.968
+Bohemia and Moravia,1518.856
+Bolivia,1640.171
+Bonaire,1248.047
+Bosnia-Herzegovina,1613.575
+Botswana,1418.91
+Brazil,1938.477
+British Guiana,1368.715
+British Honduras,1507.283
+British India,1495.156
+British Virgin Islands,1107.305
+Brunei,1035.658
+Bulgaria,1525.167
+Burkina Faso,1628.013
+Burma,1435.583
+Burundi,1402.449
+Cambodia,1159.548
+Cameroon,1675.077
+Canada,1808.404
+Cape Verde Islands,1624.579
+Cayman Islands,1220.311
+Central African Republic,1373.092
+Ceylon,1301.283
+Chad,1272.882
+Chagos Islands,1487.286
+Chile,1718.495
+China,1554.403
+Colombia,1920.392
+Comm of Indep States,1549.261
+Comoros,1468.908
+Congo,1379.408
+Congo-Leopoldville,1502.797
+Cook Islands,1294.459
+Costa Rica,1695.162
+Croatia,1876.509
+Cuba,1422.175
+Curaçao,1537.008
+Cyprus,1394.758
+Czech Republic,1735.43
+Czechoslovakia,1700.099
+DR Congo,1685.796
+Dahomey,1481.021
+Denmark,1826.816
+Djibouti,1167.754
+Dominica,1243.549
+Dominican Republic,1476.687
+Dutch East Indies,1473.251
+East Germany,1686.752
+East Timor,1018.589
+Eastern Samoa,1147.856
+Ecuador,1880.962
+Egypt,1761.338
+El Salvador,1496.265
+England,1933.706
+Equatorial Guinea,1534.972
+Eritrea,1336.405
+Estonia,1416.995
+Eswatini,1308.663
+Ethiopia,1439.095
+FS Micronesia,1442.758
+Falkland Islands,1482.407
+Faroe Islands,1403.815
+Fiji,1478.402
+Finland,1568.477
+France,1993.681
+French Congo,1509.545
+French Dahomey,1484.568
+French Guiana,1417.683
+French Somaliland,1433.731
+French Sudan,1476.203
+French Togoland,1527.26
+Gabon,1533.454
+Gambia,1499.257
+Georgia,1632.535
+Germany,1915.512
+Ghana,1577.75
+Gibraltar,1176.724
+Gold Coast,1526.648
+Greece,1730.159
+Greenland,1325.186
+Grenada,1345.046
+Guadeloupe,1511.105
+Guam,1152.601
+Guatemala,1602.732
+Guinea,1533.683
+Guinea-Bissau,1399.291
+Guyana,1467.147
+Haiti,1615.976
+Honduras,1641.474
+Hong Kong,1352.75
+Hungary,1730.59
+Iceland,1574.494
+India,1360.688
+Indonesia,1484.533
+Iran,1807.726
+Iraq,1708.126
+Ireland,1688.732
+Israel,1607.988
+Italy,1865.681
+Ivory Coast,1736.805
+Jamaica,1640.174
+Japan,1911.993
+Jordan,1707.381
+Kazakhstan,1478.65
+Kenya,1492.335
+Khmer Republic,1442.689
+Kiribati,1372.553
+Korea,1508.62
+Kosovo,1666.528
+Kurdistan,1503.776
+Kuwait,1510.633
+Kyrgyz Republic,1444.834
+Laos,1099.934
+Latvia,1381.327
+Lebanon,1477.775
+Lesotho,1359.111
+Liberia,1404.747
+Libya,1526.423
+Liechtenstein,1108.513
+Lithuania,1352.638
+Luxembourg,1469.303
+Macao,1016.875
+Macedonia,1597.973
+Madagascar,1482.329
+Malawi,1370.598
+Malaya,1505.958
+Malaysia,1508.556
+Maldives,1144.957
+Mali,1651.896
+Mali Federation,1521.519
+Malta,1341.164
+Marshall Islands,1464.477
+Martinique,1482.905
+Mauritania,1448.922
+Mauritius,1274.567
+Mayotte,1432.297
+Mexico,1864.006
+Moldova,1351.448
+Monaco,1478.189
+Mongolia,1112.191
+Montenegro,1524.674
+Montserrat,1299.231
+Morocco,1873.024
+Mozambique,1490.169
+Myanmar,1262.64
+Namibia,1444.756
+Nepal,1164.821
+Netherlands,1911.975
+Netherlands Antilles,1333.5
+New Caledonia,1557.434
+New Hebrides,1387.898
+New Zealand,1677.913
+Nicaragua,1483.491
+Niger,1458.974
+Nigeria,1758.751
+Niue,1475.645
+North Korea,1503.27
+North Vietnam,1459.034
+North Yemen,1297.819
+Northern Cyprus,1511.01
+Northern Ireland,1581.981
+Northern Mariana Islands,1113.013
+Northern Rhodesia,1518.504
+Norway,1819.655
+Nyasaland,1452.28
+Oman,1605.158
+Pakistan,1112.754
+Palau,1463.6
+Palestine,1548.641
+Panama,1749.616
+Papua New Guinea,1501.093
+Paraguay,1786.977
+Peru,1701.839
+Philippines,1375.969
+Poland,1733.48
+Portugal,1926.686
+Portuguese Guinea,1498.736
+Puerto Rico,1394.112
+Qatar,1599.259
+Reunion,1556.475
+Rhodesia,1506.519
+Romania,1634.865
+Ruanda-Urundi,1492.632
+Russia,1776.038
+Rwanda,1473.653
+Saar,1446.061
+Saint Barthelemy,1444.763
+Saint Kitts,1560.719
+Saint Kitts and Nevis,1344.569
+Saint Lucia,1309.747
+Saint Martin,1301.74
+Saint Pierre and Miquelon,1418.471
+Samoa,1347.948
+San Marino,1014.898
+Sao Tome and Principe,1443.447
+Saudi Arabia,1662.752
+Scotland,1742.57
+Senegal,1845.792
+Serbia,1738.717
+Serbia and Montenegro,1600.942
+Seychelles,1092.679
+Sierra Leone,1444.323
+Singapore,1388.876
+Sint Eustatius,1499.707
+Sint Maarten,1323.008
+Slovakia,1671.458
+Slovenia,1703.464
+Solomon Islands,1435.139
+Somalia,1179.203
+South Africa,1634.294
+South Korea,1817.015
+South Sudan,1293.888
+South Vietnam,1406.565
+South Yemen,1386.727
+Southern Rhodesia,1487.556
+Soviet Union,1773.479
+Spain,2042.264
+Sri Lanka,1128.259
+St Vincent & Grenadines,1386.991
+Sudan,1458.32
+Suriname,1548.308
+Swaziland,1408.742
+Sweden,1723.599
+Switzerland,1829.529
+Syria,1562.623
+São Tome and Principe,1478.935
+São Tomé and Príncipe,1242.003
+Tahiti,1532.776
+Taiwan,1177.152
+Tajikistan,1450.647
+Tanganyika,1434.217
+Tanzania,1431.561
+Thailand,1564.018
+Tibet,1433.145
+Togo,1471.978
+Tonga,1224.678
+Trinidad and Tobago,1535.86
+Tunisia,1696.671
+Turkey,1838.952
+Turkmenistan,1391.405
+Turks and Caicos Islands,1182.116
+Tuvalu,1376.808
+US Virgin Islands,1114.758
+Ubangi-Shari,1509.326
+Uganda,1517.409
+Ukraine,1764.815
+United Arab Emirates,1640.008
+United Arab Republic,1578.308
+United States,1818.349
+Upper Volta,1410.036
+Uruguay,1860.368
+Uzbekistan,1789.975
+Vanuatu,1472.916
+Venezuela,1744.545
+Vietnam,1551.605
+Wales,1715.395
+Wallis and Futuna,1359.694
+West Germany,1864.101
+Western Samoa,1378.661
+Yemen,1332.306
+Yugoslavia,1718.198
+Zaire,1556.062
+Zambia,1484.79
+Zanzibar,1428.493
+Zimbabwe,1464.407

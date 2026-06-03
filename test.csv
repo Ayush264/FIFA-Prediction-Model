@@ -1,0 +1,1001 @@
+date,home_team,away_team,home_score,away_score,tournament,country,neutral
+1872-11-30,Scotland,England,0,0,Friendly,Scotland,False
+1873-03-08,England,Scotland,4,2,Friendly,England,False
+1874-03-07,Scotland,England,2,1,Friendly,Scotland,False
+1875-03-06,England,Scotland,2,2,Friendly,England,False
+1876-03-04,Scotland,England,3,0,Friendly,Scotland,False
+1876-03-25,Scotland,Wales,4,0,Friendly,Scotland,False
+1877-03-03,England,Scotland,1,3,Friendly,England,False
+1877-03-05,Wales,Scotland,0,2,Friendly,Wales,False
+1878-03-02,Scotland,England,7,2,Friendly,Scotland,False
+1878-03-23,Scotland,Wales,9,0,Friendly,Scotland,False
+1879-01-18,England,Wales,2,1,Friendly,England,False
+1879-04-05,England,Scotland,5,4,Friendly,England,False
+1879-04-07,Wales,Scotland,0,3,Friendly,Wales,False
+1880-03-13,Scotland,England,5,4,Friendly,Scotland,False
+1880-03-15,Wales,England,2,3,Friendly,Wales,False
+1880-03-27,Scotland,Wales,5,1,Friendly,Scotland,False
+1881-02-26,England,Wales,0,1,Friendly,England,False
+1881-03-12,England,Scotland,1,6,Friendly,England,False
+1881-03-14,Wales,Scotland,1,5,Friendly,Wales,False
+1882-02-18,Ireland,England,0,13,Friendly,Ireland,False
+1882-02-25,Wales,Ireland,7,1,Friendly,Wales,False
+1882-03-11,Scotland,England,5,1,Friendly,Scotland,False
+1882-03-13,Wales,England,5,3,Friendly,Wales,False
+1882-03-25,Scotland,Wales,5,0,Friendly,Scotland,False
+1883-02-03,England,Wales,5,0,Friendly,England,False
+1883-02-24,England,Ireland,7,0,Friendly,England,False
+1883-03-10,England,Scotland,2,3,Friendly,England,False
+1883-03-12,Wales,Scotland,0,3,Friendly,Wales,False
+1883-03-17,Ireland,Wales,1,1,Friendly,Ireland,False
+1884-01-26,Ireland,Scotland,0,5,British Championship,Ireland,False
+1884-02-09,Wales,Ireland,6,0,British Championship,Wales,False
+1884-02-23,Ireland,England,1,8,British Championship,Ireland,False
+1884-03-15,Scotland,England,1,0,British Championship,Scotland,False
+1884-03-17,Wales,England,0,4,British Championship,Wales,False
+1884-03-29,Scotland,Wales,4,1,British Championship,Scotland,False
+1885-02-28,England,Ireland,4,0,British Championship,England,False
+1885-03-14,Scotland,Ireland,8,2,British Championship,Scotland,False
+1885-03-14,England,Wales,1,1,British Championship,England,False
+1885-03-21,England,Scotland,1,1,British Championship,England,False
+1885-03-23,Wales,Scotland,1,8,British Championship,Wales,False
+1885-04-11,Ireland,Wales,2,8,British Championship,Ireland,False
+1886-02-27,Wales,Ireland,5,0,British Championship,Wales,False
+1886-03-13,Ireland,England,1,6,British Championship,Ireland,False
+1886-03-20,Ireland,Scotland,2,7,British Championship,Ireland,False
+1886-03-27,Scotland,England,1,1,British Championship,Scotland,False
+1886-03-29,Wales,England,1,3,British Championship,Wales,False
+1886-04-10,Scotland,Wales,4,1,British Championship,Scotland,False
+1887-02-05,England,Ireland,7,0,British Championship,England,False
+1887-02-19,Scotland,Ireland,4,1,British Championship,Scotland,False
+1887-02-26,England,Wales,4,0,British Championship,England,False
+1887-03-12,Ireland,Wales,4,1,British Championship,Ireland,False
+1887-03-19,England,Scotland,2,3,British Championship,England,False
+1887-03-21,Wales,Scotland,0,2,British Championship,Wales,False
+1888-02-04,England,Wales,5,1,British Championship,England,False
+1888-03-03,Wales,Ireland,11,0,British Championship,Wales,False
+1888-03-10,Scotland,Wales,5,1,British Championship,Scotland,False
+1888-03-17,Scotland,England,0,5,British Championship,Scotland,False
+1888-03-24,Ireland,Scotland,2,10,British Championship,Ireland,False
+1888-04-07,Ireland,England,1,5,British Championship,Ireland,False
+1889-02-23,England,Wales,4,1,British Championship,England,False
+1889-03-02,England,Ireland,6,1,British Championship,England,False
+1889-03-09,Scotland,Ireland,7,0,British Championship,Scotland,False
+1889-04-13,England,Scotland,2,3,British Championship,England,False
+1889-04-15,Wales,Scotland,0,0,British Championship,Wales,False
+1889-04-27,Ireland,Wales,1,3,British Championship,Ireland,False
+1890-02-08,Wales,Ireland,5,2,British Championship,England,True
+1890-03-15,Ireland,England,1,9,British Championship,Ireland,False
+1890-03-15,Wales,England,1,3,British Championship,Wales,False
+1890-03-22,Scotland,Wales,5,0,British Championship,Scotland,False
+1890-03-29,Ireland,Scotland,1,4,British Championship,Ireland,False
+1890-04-05,Scotland,England,1,1,British Championship,Scotland,False
+1891-02-07,Ireland,Wales,7,2,British Championship,Ireland,False
+1891-03-07,England,Wales,4,1,British Championship,England,False
+1891-03-07,England,Ireland,6,1,British Championship,England,False
+1891-03-21,Wales,Scotland,3,4,British Championship,Wales,False
+1891-03-28,Scotland,Ireland,2,1,British Championship,Scotland,False
+1891-04-04,England,Scotland,2,1,British Championship,England,False
+1892-02-27,Wales,Ireland,1,1,British Championship,Wales,False
+1892-03-05,Ireland,England,0,2,British Championship,Ireland,False
+1892-03-05,Wales,England,0,2,British Championship,Wales,False
+1892-03-19,Ireland,Scotland,2,3,British Championship,Ireland,False
+1892-03-26,Scotland,Wales,6,1,British Championship,Scotland,False
+1892-04-02,Scotland,England,1,4,British Championship,Scotland,False
+1893-02-25,England,Ireland,6,1,British Championship,England,False
+1893-03-13,England,Wales,6,0,British Championship,England,False
+1893-03-18,Wales,Scotland,0,8,British Championship,Wales,False
+1893-03-25,Scotland,Ireland,6,1,British Championship,Scotland,False
+1893-04-01,England,Scotland,5,2,British Championship,England,False
+1893-04-08,Ireland,Wales,4,3,British Championship,Ireland,False
+1894-02-24,Wales,Ireland,4,1,British Championship,Wales,False
+1894-03-03,Ireland,England,2,2,British Championship,Ireland,False
+1894-03-12,Wales,England,1,5,British Championship,Wales,False
+1894-03-24,Scotland,Wales,5,2,British Championship,Scotland,False
+1894-03-31,Ireland,Scotland,1,2,British Championship,Ireland,False
+1894-04-07,Scotland,England,2,2,British Championship,Scotland,False
+1895-03-09,England,Ireland,9,0,British Championship,England,False
+1895-03-16,Ireland,Wales,2,2,British Championship,Ireland,False
+1895-03-18,England,Wales,1,1,British Championship,England,False
+1895-03-23,Wales,Scotland,2,2,British Championship,Wales,False
+1895-03-30,Scotland,Ireland,3,1,British Championship,Scotland,False
+1895-04-06,England,Scotland,3,0,British Championship,England,False
+1896-02-29,Wales,Ireland,6,1,British Championship,Wales,False
+1896-03-07,Ireland,England,0,2,British Championship,Ireland,False
+1896-03-16,Wales,England,1,9,British Championship,Wales,False
+1896-03-21,Scotland,Wales,4,0,British Championship,Scotland,False
+1896-03-28,Ireland,Scotland,3,3,British Championship,Ireland,False
+1896-04-04,Scotland,England,2,1,British Championship,Scotland,False
+1897-02-20,England,Ireland,6,0,British Championship,England,False
+1897-03-06,Ireland,Wales,4,3,British Championship,Ireland,False
+1897-03-20,Wales,Scotland,2,2,British Championship,Wales,False
+1897-03-27,Scotland,Ireland,5,1,British Championship,Scotland,False
+1897-03-29,England,Wales,4,0,British Championship,England,False
+1897-04-03,England,Scotland,1,2,British Championship,England,False
+1898-02-19,Wales,Ireland,0,1,British Championship,Wales,False
+1898-03-05,Ireland,England,2,3,British Championship,Ireland,False
+1898-03-19,Scotland,Wales,5,2,British Championship,Scotland,False
+1898-03-26,Ireland,Scotland,0,3,British Championship,Ireland,False
+1898-03-28,Wales,England,0,3,British Championship,Wales,False
+1898-04-02,Scotland,England,1,3,British Championship,Scotland,False
+1899-02-18,England,Ireland,13,2,British Championship,England,False
+1899-03-04,Ireland,Wales,1,0,British Championship,Ireland,False
+1899-03-18,Wales,Scotland,0,6,British Championship,Wales,False
+1899-03-20,England,Wales,4,0,British Championship,England,False
+1899-03-25,Scotland,Ireland,9,1,British Championship,Scotland,False
+1899-04-08,England,Scotland,2,1,British Championship,England,False
+1900-02-03,Scotland,Wales,5,2,British Championship,Scotland,False
+1900-02-24,Wales,Ireland,2,0,British Championship,Wales,False
+1900-03-03,Ireland,Scotland,0,3,British Championship,Ireland,False
+1900-03-17,Ireland,England,0,2,British Championship,Ireland,False
+1900-03-26,Wales,England,1,1,British Championship,Wales,False
+1900-04-07,Scotland,England,4,1,British Championship,Scotland,False
+1901-02-23,Scotland,Ireland,11,0,British Championship,Scotland,False
+1901-03-02,Wales,Scotland,1,1,British Championship,Wales,False
+1901-03-09,England,Ireland,3,0,British Championship,England,False
+1901-03-18,England,Wales,6,0,British Championship,England,False
+1901-03-23,Ireland,Wales,0,1,British Championship,Ireland,False
+1901-03-30,England,Scotland,2,2,British Championship,England,False
+1902-02-22,Wales,Ireland,0,3,British Championship,Wales,False
+1902-03-01,Ireland,Scotland,1,5,British Championship,Ireland,False
+1902-03-03,Wales,England,0,0,British Championship,Wales,False
+1902-03-15,Scotland,Wales,5,1,British Championship,Scotland,False
+1902-03-22,Ireland,England,0,1,British Championship,Ireland,False
+1902-04-05,Scotland,England,1,1,British Championship,Scotland,False
+1902-05-03,England,Scotland,2,2,British Championship,England,False
+1902-07-20,Uruguay,Argentina,0,6,Friendly,Uruguay,False
+1902-08-09,Ireland,Scotland,0,3,Friendly,Ireland,False
+1902-10-12,Austria,Hungary,5,0,Friendly,Austria,False
+1903-02-14,England,Ireland,4,0,British Championship,England,False
+1903-03-02,England,Wales,2,1,British Championship,England,False
+1903-03-09,Wales,Scotland,0,1,British Championship,Wales,False
+1903-03-21,Scotland,Ireland,0,2,British Championship,Scotland,False
+1903-03-28,Ireland,Wales,2,0,British Championship,Ireland,False
+1903-04-04,England,Scotland,1,2,British Championship,England,False
+1903-04-05,Hungary,Bohemia,2,1,Friendly,Hungary,False
+1903-06-11,Hungary,Austria,3,2,Friendly,Hungary,False
+1903-09-13,Argentina,Uruguay,2,3,Friendly,Argentina,False
+1903-10-11,Austria,Hungary,4,2,Friendly,Austria,False
+1904-02-29,Wales,England,2,2,British Championship,Wales,False
+1904-03-12,Scotland,Wales,1,1,British Championship,Scotland,False
+1904-03-12,Ireland,England,1,3,British Championship,Ireland,False
+1904-03-21,Wales,Ireland,0,1,British Championship,Wales,False
+1904-03-26,Ireland,Scotland,1,1,British Championship,Ireland,False
+1904-04-09,Scotland,England,0,1,British Championship,Scotland,False
+1904-05-01,Belgium,France,3,3,Friendly,Belgium,False
+1904-06-02,Hungary,Austria,3,0,Friendly,Hungary,False
+1904-10-09,Austria,Hungary,5,4,Friendly,Austria,False
+1905-02-12,France,Switzerland,1,0,Friendly,France,False
+1905-02-25,England,Ireland,1,1,British Championship,England,False
+1905-03-06,Wales,Scotland,3,1,British Championship,Wales,False
+1905-03-18,Scotland,Ireland,4,0,British Championship,Scotland,False
+1905-03-27,England,Wales,3,1,British Championship,England,False
+1905-04-01,England,Scotland,1,0,British Championship,England,False
+1905-04-08,Ireland,Wales,2,2,British Championship,Ireland,False
+1905-04-09,Hungary,Austria,0,0,Friendly,Hungary,False
+1905-04-30,Belgium,Netherlands,1,4,Friendly,Belgium,False
+1905-05-07,Belgium,France,7,0,Friendly,Belgium,False
+1905-05-14,Netherlands,Belgium,4,0,Friendly,Netherlands,False
+1905-07-21,British Guiana,Trinidad and Tobago,1,4,Friendly,British Guiana,False
+1905-08-15,Argentina,Uruguay,0,0,Lipton Cup,Argentina,False
+1906-02-17,Ireland,England,0,5,British Championship,Ireland,False
+1906-03-03,Scotland,Wales,0,2,British Championship,Scotland,False
+1906-03-17,Ireland,Scotland,0,1,British Championship,Ireland,False
+1906-03-19,Wales,England,0,1,British Championship,Wales,False
+1906-04-01,Hungary,Bohemia,1,1,Friendly,Hungary,False
+1906-04-02,Wales,Ireland,4,4,British Championship,Wales,False
+1906-04-07,Scotland,England,2,1,British Championship,Scotland,False
+1906-04-22,France,Belgium,0,5,Friendly,France,False
+1906-04-29,Belgium,Netherlands,5,0,Friendly,Belgium,False
+1906-05-13,Netherlands,Belgium,2,3,Friendly,Netherlands,False
+1906-07-09,Argentina,South Africa,0,1,Friendly,Argentina,False
+1906-08-15,Uruguay,Argentina,0,2,Lipton Cup,Uruguay,False
+1906-10-07,Bohemia,Hungary,4,4,Friendly,Bohemia,False
+1906-10-21,Argentina,Uruguay,2,1,Newton Cup,Argentina,False
+1906-11-01,France,England,0,15,Friendly,France,False
+1906-11-04,Hungary,Austria,3,1,Friendly,Hungary,False
+1907-02-16,England,Ireland,1,0,British Championship,England,False
+1907-02-23,Ireland,Wales,2,3,British Championship,Ireland,False
+1907-03-04,Wales,Scotland,1,0,British Championship,Wales,False
+1907-03-16,Scotland,Ireland,3,0,British Championship,Scotland,False
+1907-03-18,England,Wales,1,1,British Championship,England,False
+1907-04-01,Netherlands,England,1,8,Friendly,Netherlands,False
+1907-04-06,England,Scotland,1,1,British Championship,England,False
+1907-04-07,Hungary,Bohemia,5,2,Friendly,Hungary,False
+1907-04-14,Belgium,Netherlands,1,3,Friendly,Belgium,False
+1907-04-21,Belgium,France,1,2,Friendly,Belgium,False
+1907-05-05,Austria,Hungary,3,1,Friendly,Austria,False
+1907-05-09,Netherlands,Belgium,1,2,Friendly,Netherlands,False
+1907-08-15,Argentina,Uruguay,2,1,Lipton Cup,Argentina,False
+1907-10-06,Uruguay,Argentina,1,2,Newton Cup,Uruguay,False
+1907-10-06,Bohemia,Hungary,5,3,Friendly,Bohemia,False
+1907-11-03,Hungary,Austria,4,1,Friendly,Hungary,False
+1907-12-21,England,Netherlands,12,2,Friendly,England,False
+1908-02-15,Ireland,England,1,3,British Championship,Ireland,False
+1908-03-07,Scotland,Wales,2,1,British Championship,Scotland,False
+1908-03-08,Switzerland,France,1,2,Friendly,Switzerland,False
+1908-03-14,Ireland,Scotland,0,5,British Championship,Ireland,False
+1908-03-16,Wales,England,1,7,British Championship,Wales,False
+1908-03-23,England,France,12,0,Friendly,England,False
+1908-03-29,Belgium,Netherlands,1,4,Friendly,Belgium,False
+1908-04-04,Scotland,England,1,1,British Championship,Scotland,False
+1908-04-05,Hungary,Bohemia,5,2,Friendly,Hungary,False
+1908-04-05,Switzerland,Germany,5,3,Friendly,Switzerland,False
+1908-04-11,Wales,Ireland,0,1,British Championship,Wales,False
+1908-04-12,France,Belgium,1,2,Friendly,France,False
+1908-04-18,Belgium,England,2,8,Friendly,Belgium,False
+1908-04-20,Germany,England,1,5,Friendly,Germany,False
+1908-04-26,Netherlands,Belgium,3,1,Friendly,Netherlands,False
+1908-05-03,Austria,Hungary,4,0,Friendly,Austria,False
+1908-05-10,Netherlands,France,4,1,Friendly,Netherlands,False
+1908-06-06,Austria,England,1,6,Friendly,Austria,False
+1908-06-07,Austria,Germany,3,2,Friendly,Austria,False
+1908-06-08,Austria,England,1,11,Friendly,Austria,False
+1908-06-10,Hungary,England,0,7,Friendly,Hungary,False
+1908-06-13,Bohemia,England,0,4,Friendly,Bohemia,False
+1908-07-12,Sweden,Norway,11,3,Friendly,Sweden,False
+1908-08-15,Uruguay,Argentina,2,2,Lipton Cup,Uruguay,False
+1908-09-08,Sweden,England,1,6,Friendly,Sweden,False
+1908-09-13,Argentina,Uruguay,2,1,Newton Cup,Argentina,False
+1908-10-04,Argentina,Uruguay,0,1,Copa Premio Honor Argentino,Argentina,False
+1908-10-19,Denmark,France,9,0,Olympic Games,England,True
+1908-10-20,England,Sweden,12,1,Olympic Games,England,False
+1908-10-22,England,Netherlands,4,0,Olympic Games,England,False
+1908-10-22,Denmark,France,17,1,Olympic Games,England,True
+1908-10-23,Netherlands,Sweden,2,0,Olympic Games,England,True
+1908-10-24,England,Denmark,2,0,Olympic Games,England,False
+1908-10-25,Netherlands,Sweden,5,3,Friendly,Netherlands,False
+1908-10-26,Belgium,Sweden,2,1,Friendly,Belgium,False
+1908-11-01,Hungary,Austria,5,3,Friendly,Hungary,False
+1909-02-13,England,Ireland,4,0,British Championship,England,False
+1909-03-01,Wales,Scotland,3,2,British Championship,Wales,False
+1909-03-13,England,Germany,9,0,Friendly,England,False
+1909-03-15,Scotland,Ireland,5,0,British Championship,Scotland,False
+1909-03-15,England,Wales,2,0,British Championship,England,False
+1909-03-20,Ireland,Wales,2,3,British Championship,Ireland,False
+1909-03-21,Belgium,Netherlands,1,4,Friendly,Belgium,False
+1909-04-03,England,Scotland,2,0,British Championship,England,False
+1909-04-04,Hungary,Germany,3,3,Friendly,Hungary,False
+1909-04-04,Germany,Switzerland,1,0,Friendly,Germany,False
+1909-04-12,Netherlands,England,0,4,Friendly,Netherlands,False
+1909-04-19,England,Belgium,11,2,Friendly,England,False
+1909-04-25,Netherlands,Belgium,4,1,Friendly,Netherlands,False
+1909-05-02,Austria,Hungary,3,4,Friendly,Austria,False
+1909-05-09,Belgium,France,5,2,Friendly,Belgium,False
+1909-05-20,Switzerland,England,0,9,Friendly,Switzerland,False
+1909-05-22,France,England,0,11,Friendly,France,False
+1909-05-29,Hungary,England,2,4,Friendly,Hungary,False
+1909-05-30,Hungary,Austria,1,1,Friendly,Hungary,False
+1909-05-31,Hungary,England,2,8,Friendly,Hungary,False
+1909-06-01,Austria,England,1,8,Friendly,Austria,False
+1909-08-15,Argentina,Uruguay,2,1,Lipton Cup,Argentina,False
+1909-09-19,Uruguay,Argentina,2,2,Newton Cup,Uruguay,False
+1909-10-10,Argentina,Uruguay,3,1,Copa Premio Honor Argentino,Argentina,False
+1909-11-06,England,Sweden,7,0,Friendly,England,False
+1909-11-07,Hungary,Austria,2,2,Friendly,Hungary,False
+1909-12-11,England,Netherlands,9,1,Friendly,England,False
+1910-02-12,Ireland,England,1,1,British Championship,Ireland,False
+1910-03-05,Scotland,Wales,1,0,British Championship,Scotland,False
+1910-03-13,Belgium,Netherlands,3,2,Friendly,Belgium,False
+1910-03-14,Wales,England,0,1,British Championship,Wales,False
+1910-03-19,Ireland,Scotland,1,0,British Championship,Ireland,False
+1910-03-26,Belgium,England,2,2,Friendly,Belgium,False
+1910-04-02,Scotland,England,2,0,British Championship,Scotland,False
+1910-04-03,France,Belgium,0,4,Friendly,France,False
+1910-04-03,Switzerland,Germany,2,3,Friendly,Switzerland,False
+1910-04-09,England,Switzerland,6,1,Friendly,England,False
+1910-04-10,Netherlands,Belgium,7,0,Friendly,Netherlands,False
+1910-04-11,Wales,Ireland,4,1,British Championship,Wales,False
+1910-04-16,England,France,10,1,Friendly,England,False
+1910-04-24,Netherlands,Germany,4,2,Friendly,Netherlands,False
+1910-05-01,Austria,Hungary,2,1,Friendly,Austria,False
+1910-05-05,Denmark,England,2,1,Friendly,Denmark,False
+1910-05-15,Italy,France,6,2,Friendly,Italy,False
+1910-05-16,Germany,Belgium,0,3,Friendly,Germany,False
+1910-05-26,Hungary,Italy,6,1,Friendly,Hungary,False
+1910-05-27,Argentina,Chile,3,1,Friendly,Argentina,False
+1910-05-29,Uruguay,Chile,3,0,Copa Cent Rev Mayo,Argentina,True
+1910-06-05,Argentina,Chile,5,1,Copa Cent Rev Mayo,Argentina,False
+1910-06-12,Argentina,Uruguay,4,1,Copa Cent Rev Mayo,Argentina,False
+1910-06-29,South Africa,England,0,3,Friendly,South Africa,False
+1910-07-23,South Africa,England,2,6,Friendly,South Africa,False
+1910-07-30,South Africa,England,3,6,Friendly,South Africa,False
+1910-08-15,Uruguay,Argentina,3,1,Lipton Cup,Uruguay,False
+1910-09-11,Chile,Argentina,0,3,Friendly,Chile,False
+1910-09-11,Norway,Sweden,0,4,Friendly,Norway,False
+1910-10-16,Germany,Netherlands,1,2,Friendly,Germany,False
+1910-11-06,Hungary,Austria,3,0,Friendly,Hungary,False
+1910-11-13,Argentina,Uruguay,1,1,Copa Premio Honor Argentino,Argentina,False
+1910-11-27,Argentina,Uruguay,2,6,Copa Premio Honor Argentino,Argentina,False
+1911-01-01,France,Hungary,0,3,Friendly,France,False
+1911-01-06,Italy,Hungary,0,1,Friendly,Italy,False
+1911-01-08,Switzerland,Hungary,2,0,Friendly,Switzerland,False
+1911-01-28,Ireland,Wales,1,2,British Championship,Ireland,False
+1911-02-11,England,Ireland,2,1,British Championship,England,False
+1911-03-04,England,Belgium,4,0,Friendly,England,False
+1911-03-06,Wales,Scotland,2,2,British Championship,Wales,False
+1911-03-13,England,Wales,3,0,British Championship,England,False
+1911-03-18,Scotland,Ireland,2,0,British Championship,Scotland,False
+1911-03-19,Belgium,Netherlands,1,5,Friendly,Belgium,False
+1911-03-23,France,England,0,3,Friendly,France,False
+1911-03-26,Germany,Switzerland,6,2,Friendly,Germany,False
+1911-04-01,England,Scotland,1,1,British Championship,England,False
+1911-04-02,Netherlands,Belgium,3,1,Friendly,Netherlands,False
+1911-04-09,France,Italy,2,2,Friendly,France,False
+1911-04-14,Germany,England,2,2,Friendly,Germany,False
+1911-04-17,Netherlands,England,0,1,Friendly,Netherlands,False
+1911-04-23,Belgium,Germany,2,1,Friendly,Belgium,False
+1911-04-23,Switzerland,France,5,2,Friendly,Switzerland,False
+1911-04-30,Uruguay,Argentina,1,2,Friendly,Uruguay,False
+1911-04-30,Belgium,France,7,1,Friendly,Belgium,False
+1911-05-07,Austria,Hungary,3,1,Friendly,Austria,False
+1911-05-07,Italy,Switzerland,2,2,Friendly,Italy,False
+1911-05-21,Switzerland,Italy,3,0,Friendly,Switzerland,False
+1911-05-25,Switzerland,England,1,4,Friendly,Switzerland,False
+1911-06-18,Sweden,Germany,2,4,Friendly,Sweden,False
+1911-08-15,Argentina,Uruguay,0,2,Lipton Cup,Argentina,False
+1911-09-10,Germany,Austria,1,2,Friendly,Germany,False
+1911-09-17,Uruguay,Argentina,2,3,Newton Cup,Uruguay,False
+1911-09-17,Sweden,Norway,4,1,Friendly,Sweden,False
+1911-10-08,Uruguay,Argentina,1,1,Copa Premio Honor Uruguayo,Uruguay,False
+1911-10-21,England,Denmark,3,0,Friendly,England,False
+1911-10-22,Argentina,Uruguay,2,0,Copa Premio Honor Argentino,Argentina,False
+1911-10-22,Finland,Sweden,2,5,Friendly,Finland,False
+1911-10-29,Uruguay,Argentina,3,0,Copa Premio Honor Uruguayo,Uruguay,False
+1911-10-29,Hungary,Switzerland,9,0,Friendly,Hungary,False
+1911-10-29,Luxembourg,France,1,4,Friendly,Luxembourg,False
+1911-10-29,Germany,Sweden,1,3,Friendly,Germany,False
+1911-11-05,Hungary,Austria,2,0,Friendly,Hungary,False
+1911-12-17,Germany,Hungary,1,4,Friendly,Germany,False
+1912-01-28,France,Belgium,1,1,Friendly,France,False
+1912-02-10,Ireland,England,1,6,British Championship,Ireland,False
+1912-02-18,France,Switzerland,4,1,Friendly,France,False
+1912-02-20,Belgium,Switzerland,9,2,Friendly,Belgium,False
+1912-02-25,Argentina,Uruguay,2,0,Friendly,Argentina,False
+1912-03-02,Scotland,Wales,1,0,British Championship,Scotland,False
+1912-03-10,Belgium,Netherlands,1,2,Friendly,Belgium,False
+1912-03-11,Wales,England,0,2,British Championship,Wales,False
+1912-03-16,Ireland,Scotland,1,4,British Championship,Ireland,False
+1912-03-16,England,Netherlands,4,0,Friendly,England,False
+1912-03-17,Italy,France,3,4,Friendly,Italy,False
+1912-03-23,Scotland,England,1,1,British Championship,Scotland,False
+1912-03-24,Netherlands,Germany,5,5,Friendly,Netherlands,False
+1912-04-08,Belgium,England,1,2,Friendly,Belgium,False
+1912-04-13,Wales,Ireland,2,3,British Championship,Wales,False
+1912-04-14,Hungary,Germany,4,4,Friendly,Hungary,False
+1912-04-28,Netherlands,Belgium,4,3,Friendly,Netherlands,False
+1912-05-05,Austria,Hungary,1,1,Friendly,Austria,False
+1912-05-05,Switzerland,Germany,1,2,Friendly,Switzerland,False
+1912-06-16,Norway,Sweden,1,2,Friendly,Norway,False
+1912-06-20,Sweden,Hungary,2,2,Friendly,Sweden,False
+1912-06-23,Norway,Hungary,0,6,Friendly,Norway,False
+1912-06-27,Sweden,Finland,7,1,Friendly,Sweden,False
+1912-06-29,Austria,Germany,5,1,Olympic Games,Sweden,True
+1912-06-29,Sweden,Netherlands,3,4,Olympic Games,Sweden,False
+1912-06-29,Finland,Italy,3,2,Olympic Games,Sweden,True
+1912-06-30,England,Hungary,7,0,Olympic Games,Sweden,True
+1912-06-30,Netherlands,Austria,3,1,Olympic Games,Sweden,True
+1912-06-30,Denmark,Norway,7,0,Olympic Games,Sweden,True
+1912-06-30,Finland,Russia,2,1,Olympic Games,Sweden,True
+1912-07-01,Austria,Norway,1,0,Olympic Games,Sweden,True
+1912-07-01,Germany,Russia,16,0,Olympic Games,Sweden,True
+1912-07-01,Sweden,Italy,0,1,Olympic Games,Sweden,False
+1912-07-02,England,Finland,4,0,Olympic Games,Sweden,True
+1912-07-02,Denmark,Netherlands,4,1,Olympic Games,Sweden,True
+1912-07-03,Austria,Italy,5,1,Olympic Games,Sweden,True
+1912-07-03,Hungary,Germany,3,1,Olympic Games,Sweden,True
+1912-07-04,England,Denmark,4,2,Olympic Games,Sweden,True
+1912-07-04,Netherlands,Finland,9,0,Olympic Games,Sweden,True
+1912-07-05,Hungary,Austria,3,0,Olympic Games,Sweden,True
+1912-07-05,Norway,Russia,2,1,Friendly,Sweden,True
+1912-07-12,Russia,Hungary,0,9,Friendly,Russia,False
+1912-07-14,Russia,Hungary,0,12,Friendly,Russia,False
+1912-08-15,Uruguay,Argentina,2,0,Lipton Cup,Uruguay,False
+1912-08-25,Uruguay,Argentina,3,0,Copa Premio Honor Uruguayo,Uruguay,False
+1912-09-22,Argentina,Uruguay,0,1,Copa Premio Honor Argentino,Argentina,False
+1912-10-06,Argentina,Uruguay,3,3,Newton Cup,Argentina,False
+1912-10-06,Denmark,Germany,3,1,Friendly,Denmark,False
+1912-11-03,Hungary,Austria,4,0,Friendly,Hungary,False
+1912-11-03,Sweden,Norway,4,2,Friendly,Sweden,False
+1912-11-09,England,Belgium,4,0,Friendly,England,False
+1912-11-17,Germany,Netherlands,2,3,Friendly,Germany,False
+1912-12-01,Uruguay,Argentina,1,3,Montevideo Cup,Uruguay,False
+1912-12-22,Italy,Austria,1,3,Friendly,Italy,False
+1913-01-12,France,Italy,1,0,Friendly,France,False
+1913-01-18,Ireland,Wales,0,1,British Championship,Ireland,False
+1913-02-04,Philippines,China,2,1,Far Eastern Games,Philippines,False
+1913-02-15,Ireland,England,2,1,British Championship,Ireland,False
+1913-02-16,Belgium,France,3,0,Friendly,Belgium,False
+1913-02-27,France,England,1,4,Friendly,France,False
+1913-03-03,Wales,Scotland,0,0,British Championship,Wales,False
+1913-03-09,Belgium,Netherlands,3,3,Friendly,Belgium,False
+1913-03-09,Switzerland,France,1,4,Friendly,Switzerland,False
+1913-03-15,Ireland,Scotland,1,2,British Championship,Ireland,False
+1913-03-17,England,Wales,4,3,British Championship,England,False
+1913-03-21,Germany,England,0,3,Friendly,Germany,False
+1913-03-24,Netherlands,England,2,1,Friendly,Netherlands,False
+1913-04-05,England,Scotland,1,0,British Championship,England,False
+1913-04-20,Netherlands,Belgium,2,4,Friendly,Netherlands,False
+1913-04-20,France,Luxembourg,8,0,Friendly,France,False
+1913-04-27,Argentina,Uruguay,0,0,Friendly,Argentina,False
+1913-04-27,Uruguay,Argentina,4,0,Friendly,Uruguay,False
+1913-04-27,Austria,Hungary,1,4,Friendly,Austria,False
+1913-05-01,Italy,Belgium,1,0,Friendly,Italy,False
+1913-05-04,Switzerland,Belgium,1,2,Friendly,Switzerland,False
+1913-05-04,Russia,Sweden,1,4,Friendly,Russia,False
+1913-05-18,Hungary,Sweden,2,0,Friendly,Hungary,False
+1913-05-18,Germany,Switzerland,1,2,Friendly,Germany,False
+1913-05-25,Denmark,Sweden,8,0,Friendly,Denmark,False
+1913-06-08,Sweden,Norway,9,0,Friendly,Sweden,False
+1913-06-15,Argentina,Uruguay,1,1,Friendly tournament,Argentina,False
+1913-06-15,Austria,Italy,2,0,Friendly,Austria,False
+1913-07-09,Argentina,Uruguay,2,1,Friendly tournament,Argentina,False
+1913-07-13,Argentina,Uruguay,3,3,Friendly,Argentina,False
+1913-07-13,Uruguay,Argentina,5,4,Friendly,Uruguay,False
+1913-08-15,Argentina,Uruguay,4,0,Lipton Cup,Argentina,False
+1913-08-31,Argentina,Uruguay,2,0,Copa Premio Honor Argentino,Argentina,False
+1913-09-14,Russia,Norway,1,1,Friendly,Russia,False
+1913-09-21,Chile,Argentina,0,2,Friendly,Chile,False
+1913-09-28,Argentina,Uruguay,4,0,Copa Circulo de la Prensa,Argentina,False
+1913-10-05,Uruguay,Argentina,1,0,Copa Premio Honor Uruguayo,Uruguay,False
+1913-10-05,Sweden,Denmark,0,10,Friendly,Sweden,False
+1913-10-26,Uruguay,Argentina,1,0,Newton Cup,Uruguay,False
+1913-10-26,Hungary,Austria,4,3,Friendly,Hungary,False
+1913-10-26,Germany,Denmark,1,4,Friendly,Germany,False
+1913-10-26,Norway,Sweden,1,1,Friendly,Norway,False
+1913-11-02,Belgium,Switzerland,2,0,Friendly,Belgium,False
+1913-11-15,England,Netherlands,2,1,Friendly,England,False
+1913-11-23,Belgium,Germany,6,2,Friendly,Belgium,False
+1914-01-11,Italy,Austria,0,0,Friendly,Italy,False
+1914-01-19,Wales,Ireland,1,2,British Championship,Wales,False
+1914-01-25,France,Belgium,4,3,Friendly,France,False
+1914-02-08,Luxembourg,France,5,4,Friendly,Luxembourg,False
+1914-02-14,England,Ireland,0,3,British Championship,England,False
+1914-02-24,Belgium,England,1,8,Friendly,Belgium,False
+1914-02-28,Argentina,Uruguay,1,1,Friendly,Argentina,False
+1914-02-28,Scotland,Wales,0,0,British Championship,Scotland,False
+1914-03-08,France,Switzerland,2,2,Friendly,France,False
+1914-03-14,Ireland,Scotland,1,1,British Championship,Ireland,False
+1914-03-15,Belgium,Netherlands,2,4,Friendly,Belgium,False
+1914-03-16,Wales,England,0,2,British Championship,Wales,False
+1914-03-29,Italy,France,2,0,Friendly,Italy,False
+1914-04-04,Scotland,England,3,1,British Championship,Scotland,False
+1914-04-05,Italy,Switzerland,1,1,Friendly,Italy,False
+1914-04-05,Netherlands,Germany,4,4,Friendly,Netherlands,False
+1914-04-26,Netherlands,Belgium,4,2,Friendly,Netherlands,False
+1914-05-03,Austria,Hungary,2,0,Friendly,Austria,False
+1914-05-17,Switzerland,Italy,0,1,Friendly,Switzerland,False
+1914-05-17,Denmark,Netherlands,4,3,Friendly,Denmark,False
+1914-05-24,Sweden,Finland,4,3,Friendly,Sweden,False
+1914-05-31,Hungary,France,5,1,Friendly,Hungary,False
+1914-06-05,Denmark,England,3,0,Friendly,Denmark,False
+1914-06-10,Sweden,England,1,5,Friendly,Sweden,False
+1914-06-19,Sweden,Hungary,1,5,Friendly,Sweden,False
+1914-06-21,Sweden,Hungary,1,1,Friendly,Sweden,False
+1914-06-28,Norway,Sweden,0,1,Friendly,Norway,False
+1914-07-05,Sweden,Russia,2,2,Friendly,Sweden,False
+1914-07-12,Norway,Russia,1,1,Friendly,Norway,False
+1914-08-30,Uruguay,Argentina,3,2,Copa Premio Honor Uruguayo,Uruguay,False
+1914-09-13,Argentina,Uruguay,2,1,Copa Premio Honor Argentino,Argentina,False
+1914-09-20,Argentina,Brazil,3,0,Friendly,Argentina,False
+1914-09-27,Argentina,Brazil,0,1,Roca Cup,Argentina,False
+1914-10-04,Hungary,Austria,2,2,Friendly,Hungary,False
+1914-10-25,Sweden,Norway,7,0,Friendly,Sweden,False
+1914-11-08,Austria,Hungary,1,2,Friendly,Austria,False
+1914-11-15,Uruguay,Argentina,3,2,Friendly,Uruguay,False
+1914-11-22,Argentina,Uruguay,3,0,Friendly,Argentina,False
+1915-01-31,Italy,Switzerland,3,1,Friendly,Italy,False
+1915-03-28,Argentina,Uruguay,0,0,Friendly,Argentina,False
+1915-05-02,Hungary,Austria,2,5,Friendly,Hungary,False
+1915-05-17,China,Philippines,1,0,Far Eastern Games,China,False
+1915-05-18,China,Philippines,0,0,Far Eastern Games,China,False
+1915-05-20,China,Philippines,1,1,Far Eastern Games,China,False
+1915-05-30,Austria,Hungary,1,2,Friendly,Austria,False
+1915-06-06,Denmark,Sweden,2,0,Friendly,Denmark,False
+1915-06-27,Norway,Sweden,1,1,Friendly,Norway,False
+1915-07-18,Uruguay,Argentina,2,3,Copa Premio Honor Uruguayo,Uruguay,False
+1915-08-15,Argentina,Uruguay,2,1,Lipton Cup,Argentina,False
+1915-08-17,Suriname,British Guiana,0,5,Friendly,Suriname,False
+1915-09-12,Uruguay,Argentina,2,0,Newton Cup,Uruguay,False
+1915-09-19,Denmark,Norway,8,1,Friendly,Denmark,False
+1915-10-03,Austria,Hungary,4,2,Friendly,Austria,False
+1915-10-24,Sweden,Norway,5,2,Friendly,Sweden,False
+1915-10-31,Sweden,Denmark,0,2,Friendly,Sweden,False
+1915-11-07,Hungary,Austria,6,2,Friendly,Hungary,False
+1916-03-12,France,Belgium,1,4,Friendly,France,False
+1916-05-07,Austria,Hungary,3,1,Friendly,Austria,False
+1916-06-04,Hungary,Austria,2,1,Friendly,Hungary,False
+1916-06-04,Denmark,Sweden,2,0,Friendly,Denmark,False
+1916-06-25,Norway,Denmark,0,2,Friendly,Norway,False
+1916-07-02,Uruguay,Chile,4,0,South American Champ,Argentina,True
+1916-07-02,Sweden,Norway,6,0,Friendly,Sweden,False
+1916-07-06,Argentina,Chile,6,1,South American Champ,Argentina,False
+1916-07-08,Brazil,Chile,1,1,South American Champ,Argentina,True
+1916-07-10,Argentina,Brazil,1,1,South American Champ,Argentina,False
+1916-07-12,Uruguay,Brazil,2,1,South American Champ,Argentina,True
+1916-07-12,Argentina,Chile,1,0,Friendly,Argentina,False
+1916-07-14,Uruguay,Chile,4,1,Friendly,Uruguay,False
+1916-07-17,Argentina,Uruguay,0,0,South American Champ,Argentina,False
+1916-07-18,Uruguay,Brazil,0,1,Friendly,Uruguay,False
+1916-08-15,Argentina,Uruguay,3,1,Newton Cup,Argentina,False
+1916-08-15,Uruguay,Argentina,1,2,Lipton Cup,Uruguay,False
+1916-08-20,Sweden,United States,2,3,Friendly,Sweden,False
+1916-09-03,Norway,United States,1,1,Friendly,Norway,False
+1916-10-01,Argentina,Uruguay,7,2,Copa Circulo de la Prensa,Argentina,False
+1916-10-01,Uruguay,Argentina,0,1,Copa Premio Honor Uruguayo,Uruguay,False
+1916-10-01,Hungary,Austria,2,3,Friendly,Hungary,False
+1916-10-01,Norway,Sweden,0,0,Friendly,Norway,False
+1916-10-08,Sweden,Denmark,4,0,Friendly,Sweden,False
+1916-10-15,Denmark,Norway,8,0,Friendly,Denmark,False
+1916-10-29,Uruguay,Argentina,3,1,Copa Circulo de la Prensa,Uruguay,False
+1916-11-05,Austria,Hungary,3,3,Friendly,Austria,False
+1917-05-06,Austria,Hungary,1,1,Friendly,Austria,False
+1917-05-09,Japan,China,0,5,Far Eastern Games,Japan,False
+1917-05-10,Japan,Philippines,2,15,Far Eastern Games,Japan,False
+1917-05-11,China,Philippines,3,0,Far Eastern Games,Japan,True
+1917-06-03,Hungary,Austria,6,2,Friendly,Hungary,False
+1917-06-03,Italy,Belgium,3,4,Friendly,Italy,False
+1917-06-03,Denmark,Sweden,1,1,Friendly,Denmark,False
+1917-06-17,Norway,Denmark,1,2,Friendly,Norway,False
+1917-07-15,Austria,Hungary,1,4,Friendly,Austria,False
+1917-07-18,Uruguay,Argentina,0,2,Copa Premio Honor Uruguayo,Uruguay,False
+1917-08-15,Argentina,Uruguay,1,0,Lipton Cup,Argentina,False
+1917-08-19,Sweden,Norway,3,3,Friendly,Sweden,False
+1917-09-02,Uruguay,Argentina,1,0,Newton Cup,Uruguay,False
+1917-09-16,Norway,Sweden,0,2,Friendly,Norway,False
+1917-09-30,Uruguay,Chile,4,0,South American Champ,Uruguay,False
+1917-10-03,Argentina,Brazil,4,2,South American Champ,Uruguay,True
+1917-10-06,Argentina,Chile,1,0,South American Champ,Uruguay,True
+1917-10-07,Uruguay,Brazil,4,0,South American Champ,Uruguay,False
+1917-10-07,Hungary,Austria,2,1,Friendly,Hungary,False
+1917-10-07,Denmark,Norway,12,0,Friendly,Denmark,False
+1917-10-12,Brazil,Chile,5,0,South American Champ,Uruguay,True
+1917-10-14,Uruguay,Argentina,1,0,South American Champ,Uruguay,False
+1917-10-14,Sweden,Denmark,1,2,Friendly,Sweden,False
+1917-10-16,Uruguay,Brazil,3,1,Friendly,Uruguay,False
+1917-10-21,Argentina,Chile,1,1,Friendly,Argentina,False
+1917-11-04,Austria,Hungary,1,2,Friendly,Austria,False
+1917-12-23,Switzerland,Austria,0,1,Friendly,Switzerland,False
+1917-12-26,Switzerland,Austria,3,2,Friendly,Switzerland,False
+1918-04-14,Hungary,Austria,2,0,Friendly,Hungary,False
+1918-04-22,Belgium,France,5,2,Friendly,Belgium,False
+1918-05-09,Austria,Switzerland,5,1,Friendly,Austria,False
+1918-05-12,Hungary,Switzerland,2,1,Friendly,Hungary,False
+1918-05-26,Sweden,Norway,2,0,Friendly,Sweden,False
+1918-06-02,Austria,Hungary,0,2,Friendly,Austria,False
+1918-06-02,Denmark,Sweden,3,0,Friendly,Denmark,False
+1918-06-16,Norway,Denmark,3,1,Friendly,Norway,False
+1918-07-18,Uruguay,Argentina,1,1,Copa Premio Honor Uruguayo,Uruguay,False
+1918-07-28,Uruguay,Argentina,3,1,Copa Premio Honor Uruguayo,Uruguay,False
+1918-08-15,Argentina,Uruguay,0,0,Copa Premio Honor Argentino,Argentina,False
+1918-08-25,Argentina,Uruguay,2,1,Copa Premio Honor Argentino,Argentina,False
+1918-09-15,Norway,Sweden,2,1,Friendly,Norway,False
+1918-09-20,Uruguay,Argentina,1,1,Lipton Cup,Uruguay,False
+1918-09-20,Italy,Belgium,1,1,Friendly,Italy,False
+1918-09-22,Italy,Belgium,1,1,Friendly,Italy,False
+1918-09-29,Argentina,Uruguay,2,0,Newton Cup,Argentina,False
+1918-10-06,Austria,Hungary,0,3,Friendly,Austria,False
+1918-10-06,Denmark,Norway,4,0,Friendly,Denmark,False
+1918-10-20,Sweden,Denmark,1,2,Friendly,Sweden,False
+1919-03-09,Belgium,France,2,2,Friendly,Belgium,False
+1919-03-22,Scotland,Ireland,2,1,Friendly,Scotland,False
+1919-04-06,Hungary,Austria,2,1,Friendly,Hungary,False
+1919-04-19,Ireland,Scotland,0,0,Friendly,Ireland,False
+1919-04-26,England,Scotland,2,2,Friendly,England,False
+1919-05-03,Scotland,England,3,4,Friendly,Scotland,False
+1919-05-11,Paraguay,Argentina,1,5,Friendly,Paraguay,False
+1919-05-11,Brazil,Chile,6,0,South American Champ,Brazil,False
+1919-05-12,Philippines,China,0,2,Far Eastern Games,Philippines,False
+1919-05-13,Philippines,China,2,1,Far Eastern Games,Philippines,False
+1919-05-13,Uruguay,Argentina,3,2,South American Champ,Brazil,True
+1919-05-15,Philippines,China,1,2,Far Eastern Games,Philippines,False
+1919-05-17,Uruguay,Chile,2,0,South American Champ,Brazil,True
+1919-05-18,Brazil,Argentina,3,1,South American Champ,Brazil,False
+1919-05-18,Paraguay,Argentina,0,3,Friendly,Paraguay,False
+1919-05-21,Paraguay,Argentina,1,2,Friendly,Paraguay,False
+1919-05-22,Argentina,Chile,4,1,South American Champ,Brazil,True
+1919-05-24,Paraguay,Argentina,1,2,Friendly,Paraguay,False
+1919-05-25,Brazil,Uruguay,2,2,South American Champ,Brazil,False
+1919-05-29,Brazil,Uruguay,1,0,South American Champ,Brazil,False
+1919-05-29,Sweden,Finland,1,0,Friendly,Sweden,False
+1919-06-01,Brazil,Argentina,3,3,Friendly tournament,Brazil,False
+1919-06-05,Denmark,Sweden,3,0,Friendly,Denmark,False
+1919-06-09,Netherlands,Sweden,3,1,Friendly,Netherlands,False
+1919-06-12,Denmark,Norway,5,1,Friendly,Denmark,False
+1919-06-29,Norway,Sweden,4,3,Friendly,Norway,False
+1919-07-18,Uruguay,Argentina,4,1,Copa Premio Honor Uruguayo,Uruguay,False
+1919-08-24,Uruguay,Argentina,2,1,Newton Cup,Uruguay,False
+1919-08-24,Sweden,Netherlands,4,1,Friendly,Sweden,False
+1919-08-31,Norway,Netherlands,1,1,Friendly,Norway,False
+1919-09-07,Argentina,Uruguay,1,2,Lipton Cup,Argentina,False
+1919-09-14,Sweden,Norway,1,5,Friendly,Sweden,False
+1919-09-21,Norway,Denmark,3,2,Friendly,Norway,False
+1919-09-28,Finland,Sweden,3,3,Friendly,Finland,False
+1919-10-05,Austria,Hungary,2,0,Friendly,Austria,False
+1919-10-11,Wales,England,2,1,Friendly,Wales,False
+1919-10-12,Sweden,Denmark,3,0,Friendly,Sweden,False
+1919-10-18,England,Wales,2,0,Friendly,England,False
+1919-10-19,Argentina,Uruguay,6,1,Copa Premio Honor Argentino,Argentina,False
+1919-10-25,Ireland,England,1,1,British Championship,Ireland,False
+1919-11-09,Hungary,Austria,3,2,Friendly,Hungary,False
+1919-12-07,Uruguay,Argentina,4,2,Copa Circulo de la Prensa,Uruguay,False
+1920-01-18,Italy,France,9,4,Friendly,Italy,False
+1920-02-14,Ireland,Wales,2,2,British Championship,Ireland,False
+1920-02-17,Belgium,England,3,1,Friendly,Belgium,False
+1920-02-26,Wales,Scotland,1,1,British Championship,Wales,False
+1920-02-29,Switzerland,France,0,2,Friendly,Switzerland,False
+1920-03-13,Scotland,Ireland,3,0,British Championship,Scotland,False
+1920-03-15,England,Wales,1,2,British Championship,England,False
+1920-03-28,France,Belgium,2,1,Friendly,France,False
+1920-03-28,Switzerland,Italy,3,0,Friendly,Switzerland,False
+1920-04-05,France,England,0,5,Friendly,France,False
+1920-04-05,Netherlands,Denmark,2,0,Friendly,Netherlands,False
+1920-04-10,England,Scotland,5,4,British Championship,England,False
+1920-05-02,Austria,Hungary,2,2,Friendly,Austria,False
+1920-05-13,Italy,Netherlands,1,1,Friendly,Italy,False
+1920-05-16,Switzerland,Netherlands,2,1,Friendly,Switzerland,False
+1920-05-30,Sweden,Finland,4,0,Friendly,Sweden,False
+1920-06-06,Sweden,Switzerland,0,1,Friendly,Sweden,False
+1920-06-13,Norway,Denmark,1,1,Friendly,Norway,False
+1920-06-19,South Africa,England,1,3,Friendly,South Africa,False
+1920-06-26,South Africa,England,1,3,Friendly,South Africa,False
+1920-06-27,Switzerland,Germany,4,1,Friendly,Switzerland,False
+1920-06-27,Norway,Sweden,0,3,Friendly,Norway,False
+1920-07-17,South Africa,England,1,9,Friendly,South Africa,False
+1920-07-18,Uruguay,Argentina,2,0,Copa Premio Honor Uruguayo,Uruguay,False
+1920-07-25,Argentina,Uruguay,1,3,Newton Cup,Argentina,False
+1920-08-08,Argentina,Uruguay,1,0,Copa Premio Honor Argentino,Argentina,False
+1920-08-28,Italy,Egypt,2,1,Olympic Games,Belgium,True
+1920-08-28,Norway,England,3,1,Olympic Games,Belgium,True
+1920-08-28,Netherlands,Luxembourg,3,0,Olympic Games,Belgium,True
+1920-08-28,Sweden,Greece,9,0,Olympic Games,Belgium,True
+1920-08-28,Spain,Denmark,1,0,Olympic Games,Belgium,True
+1920-08-28,Czechoslovakia,Yugoslavia,7,0,Olympic Games,Belgium,True
+1920-08-29,Belgium,Spain,3,1,Olympic Games,Belgium,False
+1920-08-29,France,Italy,3,1,Olympic Games,Belgium,True
+1920-08-29,Netherlands,Sweden,5,4,Olympic Games,Belgium,True
+1920-08-29,Czechoslovakia,Norway,4,0,Olympic Games,Belgium,True
+1920-08-31,Belgium,Netherlands,3,0,Olympic Games,Belgium,False
+1920-08-31,Czechoslovakia,France,4,1,Olympic Games,Belgium,True
+1920-08-31,Italy,Norway,2,1,Olympic Games,Belgium,True
+1920-09-01,Spain,Sweden,2,1,Olympic Games,Belgium,True
+1920-09-02,Belgium,Czechoslovakia,2,0,Olympic Games,Belgium,False
+1920-09-02,Spain,Italy,2,0,Olympic Games,Belgium,True
+1920-09-03,Egypt,Yugoslavia,4,2,Friendly,Belgium,True
+1920-09-05,Spain,Netherlands,3,1,Olympic Games,Belgium,True
+1920-09-11,Chile,Brazil,0,1,South American Champ,Chile,False
+1920-09-12,Argentina,Uruguay,1,1,South American Champ,Chile,True
+1920-09-18,Uruguay,Brazil,6,0,South American Champ,Chile,True
+1920-09-19,Finland,Sweden,1,0,Friendly,Finland,False
+1920-09-20,Chile,Argentina,1,1,South American Champ,Chile,False
+1920-09-25,Argentina,Brazil,2,0,South American Champ,Chile,True
+1920-09-26,Chile,Uruguay,1,2,South American Champ,Chile,False
+1920-09-26,Austria,Germany,3,2,Friendly,Austria,False
+1920-09-26,Sweden,Norway,0,0,Friendly,Sweden,False
+1920-10-06,Argentina,Brazil,3,1,Friendly,Argentina,False
+1920-10-10,Sweden,Denmark,0,2,Friendly,Sweden,False
+1920-10-17,Finland,Estonia,6,0,Friendly,Finland,False
+1920-10-23,England,Ireland,2,0,British Championship,England,False
+1920-10-24,Germany,Hungary,1,0,Friendly,Germany,False
+1920-11-07,Hungary,Austria,1,2,Friendly,Hungary,False
+1921-02-12,Scotland,Wales,2,1,British Championship,Scotland,False
+1921-02-20,France,Italy,1,2,Friendly,France,False
+1921-02-26,Northern Ireland,Scotland,0,2,British Championship,Northern Ireland,False
+1921-03-06,Belgium,France,3,1,Friendly,Belgium,False
+1921-03-06,Italy,Switzerland,2,1,Friendly,Italy,False
+1921-03-14,Wales,England,0,0,British Championship,Wales,False
+1921-03-26,Austria,Sweden,2,2,Friendly,Austria,False
+1921-03-28,Netherlands,Switzerland,2,0,Friendly,Netherlands,False
+1921-04-07,Paraguay,Argentina,3,1,Friendly,Paraguay,False
+1921-04-09,Scotland,England,3,0,British Championship,Scotland,False
+1921-04-09,Wales,Northern Ireland,2,1,British Championship,Wales,False
+1921-04-14,Paraguay,Argentina,2,2,Friendly,Paraguay,False
+1921-04-24,Austria,Hungary,4,1,Friendly,Austria,False
+1921-05-01,Switzerland,Austria,2,2,Friendly,Switzerland,False
+1921-05-05,Germany,Austria,3,3,Friendly,Germany,False
+1921-05-05,Belgium,Italy,2,3,Friendly,Belgium,False
+1921-05-08,Netherlands,Italy,2,2,Friendly,Netherlands,False
+1921-05-15,Belgium,Netherlands,1,1,Friendly,Belgium,False
+1921-05-21,Belgium,England,0,2,Friendly,Belgium,False
+1921-05-25,Norway,Finland,3,2,Friendly,Norway,False
+1921-05-29,Sweden,Finland,0,3,Friendly,Sweden,False
+1921-05-30,Philippines,Japan,3,1,Far Eastern Games,China,True
+1921-05-31,China,Philippines,1,0,Far Eastern Games,China,False
+1921-06-01,China,Japan,4,0,Far Eastern Games,China,False
+1921-06-03,China,Japan,3,0,Friendly tournament,China,False
+1921-06-05,Hungary,Germany,3,0,Friendly,Hungary,False
+1921-06-12,Denmark,Netherlands,1,1,Friendly,Denmark,False
+1921-06-19,Norway,Sweden,3,1,Friendly,Norway,False
+1921-07-22,Estonia,Sweden,0,0,Friendly,Estonia,False
+1921-07-24,Sweden,Austria,1,3,Friendly,Sweden,False
+1921-07-31,Finland,Austria,2,3,Friendly,Finland,False
+1921-08-28,Suriname,British Guiana,1,2,Friendly,Suriname,False
+1921-08-28,Estonia,Finland,0,3,Friendly,Estonia,False
+1921-09-14,Costa Rica,El Salvador,7,0,C American Indep Cent Cup,Guatemala,True
+1921-09-14,Guatemala,Honduras,9,0,C American Indep Cent Cup,Guatemala,False
+1921-09-18,Guatemala,Costa Rica,0,6,C American Indep Cent Cup,Guatemala,False
+1921-09-18,Finland,Germany,3,3,Friendly,Finland,False
+1921-09-18,Sweden,Norway,0,3,Friendly,Sweden,False
+1921-09-25,Chile,Argentina,1,4,Friendly,Chile,False
+1921-10-02,Argentina,Brazil,1,0,South American Champ,Argentina,False
+1921-10-02,Chile,Argentina,1,1,Friendly,Chile,False
+1921-10-02,Denmark,Norway,3,1,Friendly,Denmark,False
+1921-10-07,Spain,Belgium,2,0,Friendly,Spain,False
+1921-10-09,Paraguay,Uruguay,2,1,South American Champ,Argentina,True
+1921-10-09,Sweden,Denmark,0,0,Friendly,Sweden,False
+1921-10-12,Brazil,Paraguay,3,0,South American Champ,Argentina,True
+1921-10-16,Argentina,Paraguay,3,0,South American Champ,Argentina,False
+1921-10-22,Northern Ireland,England,1,1,British Championship,Northern Ireland,False
+1921-10-23,Uruguay,Brazil,2,1,South American Champ,Argentina,True
+1921-10-28,Czechoslovakia,Yugoslavia,6,1,Friendly,Czechoslovakia,False
+1921-10-30,Argentina,Uruguay,1,0,South American Champ,Argentina,False
+1921-11-02,Uruguay,Paraguay,4,2,Friendly,Uruguay,False
+1921-11-06,Hungary,Sweden,4,2,Friendly,Hungary,False
+1921-11-06,Switzerland,Italy,1,1,Friendly,Switzerland,False
+1921-11-13,France,Netherlands,0,5,Friendly,France,False
+1921-11-13,Czechoslovakia,Sweden,2,2,Friendly,Czechoslovakia,False
+1921-12-18,Hungary,Poland,1,0,Friendly,Hungary,False
+1921-12-18,Spain,Portugal,3,1,Friendly,Spain,False
+1922-01-15,Italy,Austria,3,3,Friendly,Italy,False
+1922-01-15,France,Belgium,2,1,Friendly,France,False
+1922-01-21,Argentina,Uruguay,3,1,Friendly,Argentina,False
+1922-01-22,Argentina,Uruguay,1,3,Friendly,Argentina,False
+1922-02-04,Wales,Scotland,2,1,British Championship,Wales,False
+1922-02-26,Italy,Czechoslovakia,1,1,Friendly,Italy,False
+1922-03-04,Scotland,Northern Ireland,2,1,British Championship,Scotland,False
+1922-03-13,England,Wales,1,0,British Championship,England,False
+1922-03-26,Belgium,Netherlands,4,0,Friendly,Belgium,False
+1922-03-26,Germany,Switzerland,2,2,Friendly,Germany,False
+1922-04-01,Northern Ireland,Wales,1,1,British Championship,Northern Ireland,False
+1922-04-08,England,Scotland,0,1,British Championship,England,False
+1922-04-15,Belgium,Denmark,0,0,Friendly,Belgium,False
+1922-04-17,Netherlands,Denmark,2,0,Friendly,Netherlands,False
+1922-04-23,Austria,Germany,0,2,Friendly,Austria,False
+1922-04-30,Hungary,Austria,1,1,Friendly,Hungary,False
+1922-04-30,France,Spain,0,4,Friendly,France,False
+1922-05-07,Netherlands,Belgium,1,2,Friendly,Netherlands,False
+1922-05-14,Poland,Hungary,0,3,Friendly,Poland,False
+1922-05-21,Italy,Belgium,4,2,Friendly,Italy,False
+1922-05-25,Norway,Northern Ireland,2,1,Friendly,Norway,False
+1922-05-28,Sweden,Poland,1,2,Friendly,Sweden,False
+1922-06-05,Finland,Sweden,1,4,Friendly,Finland,False
+1922-06-08,Yugoslavia,Romania,1,2,King Alexander Cup,Yugoslavia,False
+1922-06-11,Austria,Switzerland,7,1,Friendly,Austria,False
+1922-06-11,Norway,France,7,0,Friendly,Norway,False
+1922-06-11,Denmark,Czechoslovakia,0,3,Friendly,Denmark,False
+1922-06-15,Hungary,Switzerland,1,1,Friendly,Hungary,False
+1922-06-17,New Zealand,Australia,3,1,Friendly,New Zealand,False
+1922-06-24,New Zealand,Australia,1,1,Friendly,New Zealand,False
+1922-06-28,Yugoslavia,Czechoslovakia,4,3,Friendly,Yugoslavia,False
+1922-07-02,Germany,Hungary,0,0,Friendly,Germany,False
+1922-07-08,New Zealand,Australia,3,1,Friendly,New Zealand,False
+1922-07-09,Sweden,Hungary,1,1,Friendly,Sweden,False
+1922-07-13,Finland,Hungary,1,5,Friendly,Finland,False
+1922-08-11,Finland,Estonia,10,2,Friendly,Finland,False
+1922-08-13,Sweden,Czechoslovakia,0,2,Friendly,Sweden,False
+1922-08-23,Sweden,Norway,0,0,Friendly,Sweden,False
+1922-08-26,Finland,Norway,1,3,Friendly,Finland,False
+1922-09-03,Romania,Poland,1,1,Friendly,Romania,False
+1922-09-10,Norway,Denmark,3,3,Friendly,Norway,False
+1922-09-17,Brazil,Chile,1,1,South American Champ,Brazil,False
+1922-09-23,Uruguay,Chile,2,0,South American Champ,Brazil,True
+1922-09-24,Brazil,Paraguay,1,1,South American Champ,Brazil,False
+1922-09-24,Austria,Hungary,2,2,Friendly,Austria,False
+1922-09-24,Norway,Sweden,0,5,Friendly,Norway,False
+1922-09-24,Latvia,Estonia,1,1,Friendly,Latvia,False
+1922-09-28,Argentina,Chile,4,0,South American Champ,Brazil,True
+1922-10-01,Brazil,Uruguay,0,0,South American Champ,Brazil,False
+1922-10-01,Denmark,Sweden,1,2,Friendly,Denmark,False
+1922-10-01,Yugoslavia,Poland,1,3,Friendly,Yugoslavia,False
+1922-10-05,Paraguay,Chile,3,0,South American Champ,Brazil,True
+1922-10-08,Uruguay,Argentina,1,0,South American Champ,Brazil,True
+1922-10-12,Paraguay,Uruguay,1,0,South American Champ,Brazil,True
+1922-10-15,Brazil,Argentina,2,0,South American Champ,Brazil,False
+1922-10-18,Argentina,Paraguay,2,0,South American Champ,Brazil,True
+1922-10-21,England,Northern Ireland,2,0,British Championship,England,False
+1922-10-22,Argentina,Chile,1,0,Friendly,Argentina,False
+1922-10-22,Brazil,Argentina,2,1,Roca Cup,Brazil,False
+1922-10-22,Brazil,Paraguay,3,0,South American Champ,Brazil,False
+1922-10-29,Brazil,Paraguay,3,1,Friendly tournament,Brazil,False
+1922-11-12,Uruguay,Argentina,1,0,Lipton Cup,Uruguay,False
+1922-11-19,Argentina,Uruguay,4,4,Friendly,Argentina,False
+1922-11-19,Uruguay,Argentina,2,1,Friendly,Uruguay,False
+1922-11-19,Switzerland,Netherlands,5,0,Friendly,Switzerland,False
+1922-11-26,Hungary,Austria,1,2,Friendly,Hungary,False
+1922-12-03,Italy,Switzerland,2,2,Friendly,Italy,False
+1922-12-10,Uruguay,Argentina,1,0,Copa Premio Honor Uruguayo,Uruguay,False
+1922-12-17,Argentina,Uruguay,2,2,Newton Cup,Argentina,False
+1922-12-17,Portugal,Spain,1,2,Friendly,Portugal,False
+1923-01-01,Guatemala,Mexico,2,3,Friendly,Guatemala,False
+1923-01-01,Italy,Germany,3,1,Friendly,Italy,False
+1923-01-04,Guatemala,Mexico,3,1,Friendly,Guatemala,False
+1923-01-07,Guatemala,Mexico,1,4,Friendly,Guatemala,False
+1923-01-21,Switzerland,Austria,2,0,Friendly,Switzerland,False
+1923-01-28,Spain,France,3,0,Friendly,Spain,False
+1923-02-04,Belgium,Spain,1,0,Friendly,Belgium,False
+1923-02-25,Belgium,France,4,1,Friendly,Belgium,False
+1923-03-03,Northern Ireland,Scotland,0,1,British Championship,Northern Ireland,False
+1923-03-04,Italy,Hungary,0,0,Friendly,Italy,False
+1923-03-05,Wales,England,2,2,British Championship,Wales,False
+1923-03-11,Switzerland,Hungary,1,6,Friendly,Switzerland,False
+1923-03-17,Scotland,Wales,2,0,British Championship,Scotland,False
+1923-03-19,England,Belgium,6,1,Friendly,England,False
+1923-04-02,Netherlands,France,8,1,Friendly,Netherlands,False
+1923-04-14,Scotland,England,2,2,British Championship,Scotland,False
+1923-04-14,Wales,Northern Ireland,0,3,British Championship,Wales,False
+1923-04-15,Austria,Italy,0,0,Friendly,Austria,False
+1923-04-22,France,Switzerland,2,2,Friendly,France,False
+1923-04-29,Netherlands,Belgium,1,1,Friendly,Netherlands,False
+1923-05-05,Belgium,England,3,0,Friendly,Belgium,False
+1923-05-06,Austria,Hungary,1,0,Friendly,Austria,False
+1923-05-06,Czechoslovakia,Denmark,2,0,Friendly,Czechoslovakia,False
+1923-05-10,France,England,1,4,Friendly,France,False
+1923-05-10,Germany,Netherlands,0,0,Friendly,Germany,False
+1923-05-20,Argentina,Paraguay,0,2,Rosa Chevallier Boutell Cup,Argentina,False
+1923-05-21,Sweden,England,2,4,Friendly,Sweden,False
+1923-05-22,China,Philippines,3,0,Far Eastern Games,Japan,True
+1923-05-23,Japan,Philippines,1,2,Far Eastern Games,Japan,False
+1923-05-24,Japan,China,1,5,Far Eastern Games,Japan,False
+1923-05-25,Argentina,Paraguay,1,0,Rosa Chevallier Boutell Cup,Argentina,False
+1923-05-27,Czechoslovakia,Italy,5,1,Friendly,Czechoslovakia,False
+1923-06-03,Switzerland,Germany,1,2,Friendly,Switzerland,False
+1923-06-03,Poland,Yugoslavia,1,2,Friendly,Poland,False
+1923-06-09,Australia,New Zealand,2,1,Friendly,Australia,False
+1923-06-10,Sweden,Austria,4,2,Friendly,Sweden,False
+1923-06-10,Romania,Yugoslavia,1,2,King Alexander Cup,Romania,False
+1923-06-16,Australia,New Zealand,2,3,Friendly,Australia,False
+1923-06-17,Denmark,Switzerland,3,2,Friendly,Denmark,False
+1923-06-17,Norway,Finland,3,0,Friendly,Norway,False
+1923-06-20,Sweden,Finland,5,4,Friendly,Sweden,False
+1923-06-21,Norway,Switzerland,2,2,Friendly,Norway,False
+1923-06-24,Argentina,Uruguay,0,0,Lipton Cup,Argentina,False
+1923-06-24,Lithuania,Estonia,0,5,Friendly,Lithuania,False
+1923-06-29,Sweden,Germany,2,1,Friendly,Sweden,False
+1923-06-30,Australia,New Zealand,1,4,Friendly,Australia,False
+1923-07-01,Romania,Czechoslovakia,0,6,Friendly,Romania,False
+1923-07-02,Argentina,Uruguay,1,0,Friendly,Argentina,False
+1923-07-15,Argentina,Uruguay,2,2,Copa Premio Honor Argentino,Argentina,False
+1923-07-18,Uruguay,Argentina,2,2,Friendly,Uruguay,False
+1923-07-22,Uruguay,Argentina,2,2,Copa Premio Honor Uruguayo,Uruguay,False
+1923-07-24,Estonia,Latvia,1,1,Friendly,Estonia,False
+1923-08-12,Germany,Finland,1,2,Friendly,Germany,False
+1923-08-15,Austria,Finland,2,1,Friendly,Austria,False
+1923-08-18,Australia,China,5,1,Friendly,Australia,False
+1923-08-19,Hungary,Finland,3,1,Friendly,Hungary,False
+1923-08-25,Australia,China,4,3,Friendly,Australia,False
+1923-08-25,Uruguay,Argentina,1,1,Friendly,Uruguay,False
+1923-08-27,Suriname,British Guiana,2,1,Friendly,Suriname,False
+1923-09-02,Poland,Romania,1,1,Friendly,Poland,False
+1923-09-15,Australia,China,5,0,Friendly,Australia,False
+1923-09-16,Norway,Sweden,2,3,Friendly,Norway,False
+1923-09-19,Estonia,Russia,2,4,Friendly,Estonia,False
+1923-09-22,Australia,China,1,3,Friendly,Australia,False
+1923-09-23,Hungary,Austria,2,0,Friendly,Hungary,False
+1923-09-23,Finland,Poland,5,3,Friendly,Finland,False
+1923-09-25,Estonia,Poland,1,4,Friendly,Estonia,False
+1923-09-30,Uruguay,Argentina,0,2,Copa Premio Honor Uruguayo,Uruguay,False
+1923-09-30,Denmark,Norway,2,1,Friendly,Denmark,False
+1923-09-30,Estonia,Finland,2,1,Friendly,Estonia,False
+1923-10-06,Australia,China,2,2,Friendly,Australia,False
+1923-10-12,Argentina,Paraguay,0,2,Friendly,Argentina,False
+1923-10-14,Sweden,Denmark,1,3,Friendly,Sweden,False
+1923-10-20,Northern Ireland,England,2,1,British Championship,Northern Ireland,False
+1923-10-22,Trinidad and Tobago,British Guiana,0,0,Friendly tournament,Trinidad and Tobago,False
+1923-10-24,Trinidad and Tobago,British Guiana,3,0,Friendly tournament,Trinidad and Tobago,False
+1923-10-26,Turkey,Romania,2,2,Friendly,Turkey,False
+1923-10-27,Trinidad and Tobago,British Guiana,1,0,Friendly tournament,Trinidad and Tobago,False
+1923-10-28,Hungary,Sweden,2,1,Friendly,Hungary,False
+1923-10-28,France,Norway,0,2,Friendly,France,False
+1923-10-28,Czechoslovakia,Yugoslavia,4,4,Friendly,Czechoslovakia,False
+1923-10-29,Argentina,Paraguay,4,3,South American Champ,Uruguay,True
+1923-11-01,Belgium,England,2,2,Friendly,Belgium,False
+1923-11-01,Poland,Sweden,2,2,Friendly,Poland,False
+1923-11-04,Uruguay,Paraguay,2,0,South American Champ,Uruguay,False
+1923-11-04,Germany,Norway,1,0,Friendly,Germany,False
+1923-11-11,Paraguay,Brazil,1,0,South American Champ,Uruguay,True
+1923-11-18,Argentina,Brazil,2,1,South American Champ,Uruguay,True
+1923-11-22,Brazil,Paraguay,2,0,Friendly tournament,Uruguay,True
+1923-11-25,Uruguay,Brazil,2,1,South American Champ,Uruguay,False
+1923-11-25,Uruguay,Chile,2,1,Friendly,Uruguay,False
+1923-11-25,Netherlands,Switzerland,4,1,Friendly,Netherlands,False
+1923-12-02,Uruguay,Argentina,2,0,South American Champ,Uruguay,False
+1923-12-02,Argentina,Brazil,0,2,Friendly tournament,Argentina,False
+1923-12-02,Argentina,Chile,6,0,Friendly,Argentina,False
+1923-12-08,Argentina,Uruguay,2,3,Friendly tournament,Argentina,False
+1923-12-09,Mexico,Guatemala,2,1,Friendly,Mexico,False
+1923-12-09,Argentina,Brazil,2,0,Roca Cup,Argentina,False
+1923-12-12,Mexico,Guatemala,2,0,Friendly,Mexico,False
+1923-12-16,Mexico,Guatemala,3,3,Friendly,Mexico,False
+1923-12-16,Spain,Portugal,3,0,Friendly,Spain,False
+1924-01-13,Germany,Austria,4,3,Friendly,Germany,False
+1924-01-13,France,Belgium,2,0,Friendly,France,False
+1924-01-20,Italy,Austria,0,4,Friendly,Italy,False
+1924-02-10,Yugoslavia,Austria,1,4,Friendly,Yugoslavia,False
+1924-02-16,Wales,Scotland,2,0,British Championship,Wales,False
+1924-03-01,Scotland,Northern Ireland,2,0,British Championship,Scotland,False
+1924-03-03,England,Wales,1,2,British Championship,England,False
+1924-03-09,Italy,Spain,0,0,Friendly,Italy,False
+1924-03-15,Northern Ireland,Wales,0,1,British Championship,Northern Ireland,False
+1924-03-23,Netherlands,Belgium,1,1,Friendly,Netherlands,False
+1924-03-23,Switzerland,France,3,0,Friendly,Switzerland,False
+1924-04-06,Aruba,Curaçao,0,4,Friendly,Aruba,False
+1924-04-06,Hungary,Italy,7,1,Friendly,Hungary,False
+1924-04-12,England,Scotland,1,1,British Championship,England,False
+1924-04-21,Switzerland,Denmark,2,0,Friendly,Switzerland,False
+1924-04-21,Netherlands,Germany,0,1,Friendly,Netherlands,False
+1924-04-27,Belgium,Netherlands,1,1,Friendly,Belgium,False
+1924-05-04,Hungary,Austria,2,2,Friendly,Hungary,False
+1924-05-15,Paraguay,Argentina,1,3,Rosa Chevallier Boutell Cup,Paraguay,False
+1924-05-17,France,England,1,3,Friendly,France,False
+1924-05-18,Paraguay,Argentina,2,1,Rosa Chevallier Boutell Cup,Paraguay,False
+1924-05-18,Switzerland,Hungary,4,2,Friendly,Switzerland,False
+1924-05-18,Sweden,Poland,5,1,Friendly,Sweden,False
+1924-05-20,Austria,Romania,4,1,Friendly,Austria,False
+1924-05-20,Sweden,Poland,7,1,Friendly,Sweden,False
+1924-05-21,Austria,Bulgaria,6,0,Friendly,Austria,False
+1924-05-25,United States,Estonia,1,0,Olympic Games,France,True
+1924-05-25,Argentina,Uruguay,4,0,Newton Cup,Argentina,False
+1924-05-25,Uruguay,Argentina,2,0,Newton Cup,Uruguay,False
+1924-05-25,Switzerland,Lithuania,9,0,Olympic Games,France,True
+1924-05-25,Italy,Spain,1,0,Olympic Games,France,True
+1924-05-25,Czechoslovakia,Turkey,5,2,Olympic Games,France,True
+1924-05-26,Uruguay,Yugoslavia,7,0,Olympic Games,France,True
+1924-05-26,Hungary,Poland,5,0,Olympic Games,France,True
+1924-05-27,Egypt,Lithuania,10,0,Friendly,France,True
+1924-05-27,France,Latvia,7,0,Olympic Games,France,False
+1924-05-27,Netherlands,Romania,6,0,Olympic Games,France,True
+1924-05-28,Czechoslovakia,Switzerland,1,1,Olympic Games,France,True
+1924-05-28,Ireland,Bulgaria,1,0,Olympic Games,France,True
+1924-05-29,Egypt,Hungary,3,0,Olympic Games,France,True
+1924-05-29,Uruguay,United States,3,0,Olympic Games,France,True
+1924-05-29,Sweden,Belgium,8,1,Olympic Games,France,True
+1924-05-29,Italy,Luxembourg,2,0,Olympic Games,France,True
+1924-05-30,Switzerland,Czechoslovakia,1,0,Olympic Games,France,True
+1924-06-01,Sweden,Egypt,5,0,Olympic Games,France,True
+1924-06-01,France,Uruguay,1,5,Olympic Games,France,False
+1924-06-02,Switzerland,Italy,2,1,Olympic Games,France,True
+1924-06-02,Netherlands,Ireland,2,1,Olympic Games,France,True
+1924-06-03,Ireland,Estonia,3,1,Friendly,France,True
+1924-06-04,France,Hungary,0,1,Friendly,France,False
+1924-06-05,Switzerland,Sweden,2,1,Olympic Games,France,True
+1924-06-06,Uruguay,Netherlands,2,1,Olympic Games,France,True
+1924-06-07,Australia,Canada,3,2,Friendly,Australia,False
+1924-06-08,Netherlands,Sweden,1,1,Olympic Games,France,True
+1924-06-09,Uruguay,Switzerland,3,0,Olympic Games,France,True
+1924-06-09,Sweden,Netherlands,3,1,Olympic Games,France,True
+1924-06-10,Poland,United States,2,3,Friendly,Poland,False
+1924-06-10,Belgium,Sweden,5,0,Friendly,Belgium,False
+1924-06-14,Australia,Canada,0,1,Friendly,Australia,False
+1924-06-14,Ireland,United States,3,1,Friendly,Ireland,False
+1924-06-15,Norway,Germany,0,2,Friendly,Norway,False
+1924-06-15,Denmark,Sweden,2,3,Nordic Championship,Denmark,False
+1924-06-17,Finland,Turkey,2,4,Friendly,Finland,False
+1924-06-19,Estonia,Turkey,1,4,Friendly,Estonia,False
+1924-06-22,Austria,Egypt,3,1,Friendly,Austria,False
+1924-06-22,Latvia,Turkey,1,3,Friendly,Latvia,False
+1924-06-23,Australia,Canada,4,1,Friendly,Australia,False
+1924-06-28,Australia,Canada,0,0,Friendly,Australia,False
+1924-06-29,Sweden,Egypt,5,0,Friendly,Sweden,False
+1924-06-29,Poland,Turkey,2,0,Friendly,Poland,False
+1924-07-12,Australia,Canada,1,4,Friendly,Australia,False
+1924-07-25,Sweden,Estonia,5,2,Friendly,Sweden,False
+1924-07-26,Australia,Canada,1,0,Friendly,Australia,False
+1924-07-28,Finland,Sweden,5,7,Friendly,Finland,False
+1924-08-10,Argentina,Uruguay,0,0,Friendly tournament,Argentina,False
+1924-08-10,Poland,Finland,1,0,Friendly,Poland,False
+1924-08-14,Latvia,Finland,0,2,Friendly,Latvia,False
+1924-08-16,Lithuania,Latvia,2,4,Friendly,Lithuania,False
+1924-08-23,Finland,Norway,2,0,Friendly,Finland,False
+1924-08-24,Estonia,Lithuania,1,2,Friendly,Estonia,False
+1924-08-31,Uruguay,Argentina,2,3,Copa Premio Honor Uruguayo,Uruguay,False
+1924-08-31,Hungary,Poland,4,0,Friendly,Hungary,False
+1924-08-31,Germany,Sweden,1,4,Friendly,Germany,False
+1924-08-31,Czechoslovakia,Romania,4,1,Friendly,Czechoslovakia,False
+1924-09-14,Austria,Hungary,2,1,Friendly,Austria,False
+1924-09-14,Norway,Denmark,1,3,Nordic Championship,Norway,False
+1924-09-14,Finland,Estonia,4,0,Friendly,Finland,False
+1924-09-21,Uruguay,Argentina,1,1,Friendly,Uruguay,False
+1924-09-21,Hungary,Germany,4,1,Friendly,Hungary,False
+1924-09-21,Sweden,Norway,6,1,Nordic Championship,Sweden,False
+1924-09-24,Northern Ireland,South Africa,1,2,Friendly,Northern Ireland,False
+1924-09-28,Yugoslavia,Czechoslovakia,0,2,Friendly,Yugoslavia,False

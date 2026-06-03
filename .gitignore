@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+
+# MLflow and training artifacts
+mlflow.db
+mlruns/
+
+# Build and log outputs
+pipeline.log
+pipeline_output.txt
+
+# Generated exports
+powerbi_exports/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

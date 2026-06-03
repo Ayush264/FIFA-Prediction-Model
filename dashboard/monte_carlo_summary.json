@@ -1,0 +1,292 @@
+{
+  "n_simulations": 10000,
+  "top_10": [
+    {
+      "team": "Spain",
+      "champion_count": 1318,
+      "championship_probability": 13.18
+    },
+    {
+      "team": "Argentina",
+      "champion_count": 1316,
+      "championship_probability": 13.16
+    },
+    {
+      "team": "France",
+      "champion_count": 1057,
+      "championship_probability": 10.57
+    },
+    {
+      "team": "Brazil",
+      "champion_count": 500,
+      "championship_probability": 5.0
+    },
+    {
+      "team": "England",
+      "champion_count": 491,
+      "championship_probability": 4.91
+    },
+    {
+      "team": "Portugal",
+      "champion_count": 458,
+      "championship_probability": 4.58
+    },
+    {
+      "team": "Colombia",
+      "champion_count": 432,
+      "championship_probability": 4.32
+    },
+    {
+      "team": "Netherlands",
+      "champion_count": 412,
+      "championship_probability": 4.12
+    },
+    {
+      "team": "Japan",
+      "champion_count": 382,
+      "championship_probability": 3.82
+    },
+    {
+      "team": "Germany",
+      "champion_count": 377,
+      "championship_probability": 3.77
+    }
+  ],
+  "all_results": [
+    {
+      "team": "Spain",
+      "champion_count": 1318,
+      "championship_probability": 13.18
+    },
+    {
+      "team": "Argentina",
+      "champion_count": 1316,
+      "championship_probability": 13.16
+    },
+    {
+      "team": "France",
+      "champion_count": 1057,
+      "championship_probability": 10.57
+    },
+    {
+      "team": "Brazil",
+      "champion_count": 500,
+      "championship_probability": 5.0
+    },
+    {
+      "team": "England",
+      "champion_count": 491,
+      "championship_probability": 4.91
+    },
+    {
+      "team": "Portugal",
+      "champion_count": 458,
+      "championship_probability": 4.58
+    },
+    {
+      "team": "Colombia",
+      "champion_count": 432,
+      "championship_probability": 4.32
+    },
+    {
+      "team": "Netherlands",
+      "champion_count": 412,
+      "championship_probability": 4.12
+    },
+    {
+      "team": "Japan",
+      "champion_count": 382,
+      "championship_probability": 3.82
+    },
+    {
+      "team": "Germany",
+      "champion_count": 377,
+      "championship_probability": 3.77
+    },
+    {
+      "team": "Mexico",
+      "champion_count": 276,
+      "championship_probability": 2.76
+    },
+    {
+      "team": "Morocco",
+      "champion_count": 257,
+      "championship_probability": 2.57
+    },
+    {
+      "team": "Ecuador",
+      "champion_count": 246,
+      "championship_probability": 2.46
+    },
+    {
+      "team": "Italy",
+      "champion_count": 228,
+      "championship_probability": 2.28
+    },
+    {
+      "team": "Croatia",
+      "champion_count": 221,
+      "championship_probability": 2.21
+    },
+    {
+      "team": "Uruguay",
+      "champion_count": 183,
+      "championship_probability": 1.83
+    },
+    {
+      "team": "Senegal",
+      "champion_count": 177,
+      "championship_probability": 1.77
+    },
+    {
+      "team": "Belgium",
+      "champion_count": 163,
+      "championship_probability": 1.63
+    },
+    {
+      "team": "South Korea",
+      "champion_count": 156,
+      "championship_probability": 1.56
+    },
+    {
+      "team": "Canada",
+      "champion_count": 140,
+      "championship_probability": 1.4
+    },
+    {
+      "team": "Turkey",
+      "champion_count": 137,
+      "championship_probability": 1.37
+    },
+    {
+      "team": "United States",
+      "champion_count": 134,
+      "championship_probability": 1.34
+    },
+    {
+      "team": "Iran",
+      "champion_count": 120,
+      "championship_probability": 1.2
+    },
+    {
+      "team": "Denmark",
+      "champion_count": 112,
+      "championship_probability": 1.12
+    },
+    {
+      "team": "Australia",
+      "champion_count": 104,
+      "championship_probability": 1.04
+    },
+    {
+      "team": "Algeria",
+      "champion_count": 93,
+      "championship_probability": 0.93
+    },
+    {
+      "team": "Uzbekistan",
+      "champion_count": 74,
+      "championship_probability": 0.74
+    },
+    {
+      "team": "Ukraine",
+      "champion_count": 69,
+      "championship_probability": 0.69
+    },
+    {
+      "team": "Paraguay",
+      "champion_count": 68,
+      "championship_probability": 0.68
+    },
+    {
+      "team": "Nigeria",
+      "champion_count": 59,
+      "championship_probability": 0.59
+    },
+    {
+      "team": "Poland",
+      "champion_count": 38,
+      "championship_probability": 0.38
+    },
+    {
+      "team": "Venezuela",
+      "champion_count": 37,
+      "championship_probability": 0.37
+    },
+    {
+      "team": "Chile",
+      "champion_count": 28,
+      "championship_probability": 0.28
+    },
+    {
+      "team": "Jordan",
+      "champion_count": 26,
+      "championship_probability": 0.26
+    },
+    {
+      "team": "Slovenia",
+      "champion_count": 20,
+      "championship_probability": 0.2
+    },
+    {
+      "team": "Costa Rica",
+      "champion_count": 20,
+      "championship_probability": 0.2
+    },
+    {
+      "team": "Peru",
+      "champion_count": 19,
+      "championship_probability": 0.19
+    },
+    {
+      "team": "Saudi Arabia",
+      "champion_count": 14,
+      "championship_probability": 0.14
+    },
+    {
+      "team": "Cameroon",
+      "champion_count": 11,
+      "championship_probability": 0.11
+    },
+    {
+      "team": "Cape Verde Islands",
+      "champion_count": 6,
+      "championship_probability": 0.06
+    },
+    {
+      "team": "New Zealand",
+      "champion_count": 6,
+      "championship_probability": 0.06
+    },
+    {
+      "team": "Bolivia",
+      "champion_count": 5,
+      "championship_probability": 0.05
+    },
+    {
+      "team": "Honduras",
+      "champion_count": 4,
+      "championship_probability": 0.04
+    },
+    {
+      "team": "Curacao",
+      "champion_count": 2,
+      "championship_probability": 0.02
+    },
+    {
+      "team": "Haiti",
+      "champion_count": 2,
+      "championship_probability": 0.02
+    },
+    {
+      "team": "China",
+      "champion_count": 1,
+      "championship_probability": 0.01
+    },
+    {
+      "team": "Kenya",
+      "champion_count": 1,
+      "championship_probability": 0.01
+    }
+  ]
+}
