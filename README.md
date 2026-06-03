@@ -1,22 +1,25 @@
 # ⚽ FIFA World Cup 2026 Prediction Platform
 
-An end-to-end machine learning platform to predict the FIFA World Cup 2026 winner using PySpark ETL pipelines, XGBoost, and Monte Carlo simulation.
+GitHub: https://github.com/Ayush264/FIFA-Prediction-Model
+
+An end-to-end machine learning platform to predict the FIFA World Cup 2026 winner using PySpark ETL pipelines, XGBoost, MLflow tracking, Power BI exports, and Monte Carlo simulation.
 
 ---
 
 ## 🏗️ Architecture
 
 ```
-Raw Datasets → PySpark ETL → Feature Engineering → ML Models → Monte Carlo → Power BI
+Raw Datasets → PySpark ETL → Feature Engineering → ML Models → MLflow Tracking → Simulation → Power BI / Streamlit
 ```
 
-| Layer                     | Tech                                        |
-| ------------------------- | ------------------------------------------- |
-| Data Ingestion & Cleaning | PySpark                                     |
-| Feature Store             | Apache Parquet                              |
-| ML Models                 | Logistic Regression, Random Forest, XGBoost |
-| Tournament Simulation     | Monte Carlo (10,000 runs)                   |
-| BI Dashboard              | Power BI                                    |
+| Layer                     | Tech                                                          |
+| ------------------------- | ------------------------------------------------------------- |
+| Data Ingestion & Cleaning | PySpark                                                       |
+| Feature Store             | Apache Parquet                                                |
+| ML Models                 | Logistic Regression, Random Forest, XGBoost                   |
+| Experiment Tracking       | MLflow (SQLite backend, model registry, artifacts)            |
+| Tournament Simulation     | Monte Carlo (10,000 runs)                                     |
+| BI Dashboard              | Power BI, Streamlit Intelligence Center                       |
 
 ---
 
@@ -36,11 +39,15 @@ FIFA-WorldCup-Prediction/
 │   ├── train_model.py          # LR + RF + XGBoost training + evaluation
 │   ├── best_model.pkl          # Best trained model (XGBoost)
 │   └── evaluation_report.json  # Accuracy, F1, confusion matrix
+├── app/
+│   └── streamlit_app.py        # World Cup Intelligence Center UI
 ├── simulation/
 │   └── monte_carlo.py          # 10,000-run WC tournament simulator
 ├── dashboard/
 │   ├── championship_probabilities.csv  # Monte Carlo output (→ Power BI)
 │   └── monte_carlo_summary.json
+├── powerbi_exports/           # Flattened datasets for Power BI import
+│   └── data_dictionary.csv     # Data dictionary for Power BI schemas
 ├── sql/
 │   └── business_queries.sql    # 10 BI queries for Power BI
 └── run_pipeline.py             # Master runner (all steps)
@@ -120,6 +127,13 @@ cd FIFA-WorldCup-Prediction
 python run_pipeline.py
 ```
 
+### Run Streamlit Intelligence Center
+
+```bash
+cd FIFA-WorldCup-Prediction
+streamlit run app/streamlit_app.py
+```
+
 ### Run MLflow UI
 
 ```bash
@@ -137,6 +151,8 @@ pip install mlflow
 Then open:
 
 http://localhost:5000
+
+The project includes MLflow experiment tracking and best-model registration in the training pipeline. If you want to review runs, metrics, and confusion matrices, use the UI or `mlflow ui` with the helper scripts.
 
 If the UI shows a blank page or refuses to connect, try:
 
@@ -189,6 +205,8 @@ Connect Power BI to:
 - `dashboard/championship_probabilities.csv` — Win probabilities (bar/donut chart)
 - `data/feature_store/team_profiles.csv` — Team strength matrix (scatter/table)
 - `models/evaluation_report.json` — Model comparison table
+- `powerbi_exports/` — Flattened datasets optimized for Power BI import, including `executive_summary.csv`, `team_rankings.csv`, `feature_importance.csv`, `historical_match_summary.csv`, and `tournament_statistics.csv`
+- `powerbi_exports/data_dictionary.csv` — Column definitions and dataset schema for BI reports
 
 Use queries from `sql/business_queries.sql` via Power BI's SQL connector or after loading CSVs.
 
