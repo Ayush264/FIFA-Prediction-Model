@@ -1,4 +1,5 @@
 import math
+import unicodedata
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -7,6 +8,10 @@ OUTPUT_DIR = Path("powerbi_exports")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 TEAM_RANKINGS_PATH = Path("dashboard/team_rankings.csv")
+TEAM_RANKINGS_DASHBOARD_PATH = OUTPUT_DIR / "team_rankings_dashboard.csv"
+DASHBOARD_METADATA_PATH = OUTPUT_DIR / "dashboard_metadata.csv"
+CURRENT_FIFA_RANKINGS_PATH = Path(
+    "data/feature_store/fifa_rankings_latest.csv")
 CHAMP_PROBS_PATH = Path("dashboard/championship_probabilities.csv")
 FEATURE_IMPORTANCE_PATH = Path("dashboard/feature_importance.csv")
 WORLD_CUP_MATCHES_PATH = Path("data/processed/world_cup_matches.csv")
@@ -22,6 +27,146 @@ def normalize(series: pd.Series) -> pd.Series:
     return (series - low) / (high - low)
 
 
+def normalize_identifier(value: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        return ""
+    normalized = unicodedata.normalize("NFKD", value)
+    normalized = "".join(
+        ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = normalized.replace("’", "'").replace("‘", "'")
+    normalized = normalized.replace("“", '"').replace("”", '"')
+    normalized = normalized.replace("´", "'").replace("`", "'")
+    normalized = normalized.replace("–", "-").replace("—", "-")
+    normalized = normalized.replace(".", "").replace(
+        ",", "").replace("(", "").replace(")", "")
+    normalized = normalized.lower()
+    normalized = " ".join(normalized.split())
+    return normalized
+
+
+def build_canonical_team_map() -> dict[str, str]:
+    canonical = {}
+
+    def add_team_names(names):
+        for team in pd.Series(names).dropna().astype(str).str.strip():
+            key = normalize_identifier(team)
+            if key:
+                canonical[key] = team
+
+    if CURRENT_FIFA_RANKINGS_PATH.exists():
+        add_team_names(pd.read_csv(CURRENT_FIFA_RANKINGS_PATH)["team"])
+
+    if CHAMP_PROBS_PATH.exists():
+        add_team_names(pd.read_csv(CHAMP_PROBS_PATH)["team"])
+
+    alias_map = {
+        "west germany": "Germany",
+        "east germany": "Germany",
+        "soviet union": "Russia",
+        "ussr": "Russia",
+        "u s s r": "Russia",
+        "yugoslavia": "Serbia",
+        "zaire": "Congo DR",
+        "upper volta": "Burkina Faso",
+        "united arab republic": "Egypt",
+        "british guiana": "Guyana",
+        "british honduras": "Belize",
+        "ceylon": "Sri Lanka",
+        "burma": "Myanmar",
+        "persia": "Iran",
+        "siam": "Thailand",
+        "east timor": "Timor-Leste",
+        "north yemen": "Yemen",
+        "south yemen": "Yemen",
+        "aden": "Yemen",
+        "gold coast": "Ghana",
+        "french sudan": "Mali",
+        "dutch east indies": "Indonesia",
+        "rhodesia": "Zimbabwe",
+        "northern rhodesia": "Zambia",
+        "nyasaland": "Malawi",
+        "basutoland": "Lesotho",
+        "bechuanaland": "Botswana",
+        "korea": "South Korea",
+        "taiwan": "Chinese Taipei",
+        "ivory coast": "Côte d'Ivoire",
+        "brunei": "Brunei Darussalam",
+        "sao tome and principe": "São Tomé and Príncipe",
+        "s?o tome and pr?ncipe": "São Tomé and Príncipe",
+        "sao tome and principe": "São Tomé and Príncipe",
+        "congo leopoldville": "Congo DR",
+        "congo leopoldville": "Congo DR",
+        "congo dr": "Congo DR",
+    }
+
+    for alias_key, canonical_name in alias_map.items():
+        canonical[alias_key] = canonical_name
+
+    return canonical
+
+
+def normalize_team_name(team: str, canonical_map: dict[str, str]) -> str:
+    if not isinstance(team, str):
+        return ""
+    key = normalize_identifier(team)
+    return canonical_map.get(key, "")
+
+
+def filter_dashboard_teams(rankings: pd.DataFrame, canonical_map: dict[str, str]) -> pd.DataFrame:
+    df = rankings.copy()
+    if df.empty:
+        return df
+
+    df["team"] = df["team"].astype(str).map(
+        lambda x: normalize_team_name(x, canonical_map))
+    df = df[df["team"].astype(bool)].copy()
+    if df.empty:
+        return df
+
+    numeric_cols = [col for col in df.columns if col !=
+                    "team" and pd.api.types.is_numeric_dtype(df[col])]
+    aggregation = {col: "max" for col in numeric_cols}
+    aggregation.update(
+        {col: "first" for col in df.columns if col not in aggregation and col != "team"})
+
+    df = df.groupby("team", as_index=False).agg(aggregation)
+    return df
+
+
+def build_dashboard_metadata(rankings: pd.DataFrame, probs: pd.DataFrame) -> pd.DataFrame:
+    top_power = rankings.sort_values("power_index", ascending=False).head(1)
+    top_prob = probs.sort_values(
+        "championship_probability", ascending=False).head(1)
+
+    return pd.DataFrame([
+        {
+            "metric_name": "total_current_fifa_teams",
+            "value": len(rankings),
+            "description": "Count of modern FIFA teams included in the dashboard export.",
+        },
+        {
+            "metric_name": "top_power_index_team",
+            "value": top_power.iloc[0]["team"] if not top_power.empty else "",
+            "description": "Team with the highest dashboard Power Index.",
+        },
+        {
+            "metric_name": "top_power_index_score",
+            "value": round(float(top_power.iloc[0]["power_index"]), 2) if not top_power.empty else 0.0,
+            "description": "Top team's computed Power Index score.",
+        },
+        {
+            "metric_name": "top_championship_probability_team",
+            "value": top_prob.iloc[0]["team"] if not top_prob.empty else "",
+            "description": "Team with the highest championship probability.",
+        },
+        {
+            "metric_name": "top_championship_probability_pct",
+            "value": round(float(top_prob.iloc[0]["championship_probability"]), 2) if not top_prob.empty else 0.0,
+            "description": "Highest championship probability percentage from the simulation.",
+        },
+    ])
+
+
 def compute_power_index(rankings: pd.DataFrame, probs: pd.DataFrame) -> pd.DataFrame:
     df = rankings.copy()
     if df.empty:
@@ -34,7 +179,8 @@ def compute_power_index(rankings: pd.DataFrame, probs: pd.DataFrame) -> pd.DataF
     df["form_score_norm"] = normalize(df["form"])
     df["player_score_norm"] = normalize(df["player_strength"])
     df["win_score_norm"] = normalize(df["win_pct"])
-    df["rank_score_norm"] = 1.0 - normalize(df["fifa_rank"].fillna(df["fifa_rank"].max()))
+    df["rank_score_norm"] = 1.0 - \
+        normalize(df["fifa_rank"].fillna(df["fifa_rank"].max()))
 
     weights = {
         "elo_score": 0.3,
@@ -51,10 +197,14 @@ def compute_power_index(rankings: pd.DataFrame, probs: pd.DataFrame) -> pd.DataF
         + df["rank_score_norm"] * weights["rank_score_norm"]
     ) * 100
     df["elo_rank"] = df["elo"].rank(method="min", ascending=False).astype(int)
-    df["form_rank"] = df["form"].rank(method="min", ascending=False).astype(int)
-    df["player_strength_rank"] = df["player_strength"].rank(method="min", ascending=False).astype(int)
-    df["win_pct_rank"] = df["win_pct"].rank(method="min", ascending=False).astype(int)
-    df["power_rank"] = df["power_index"].rank(method="min", ascending=False).astype(int)
+    df["form_rank"] = df["form"].rank(
+        method="min", ascending=False).astype(int)
+    df["player_strength_rank"] = df["player_strength"].rank(
+        method="min", ascending=False).astype(int)
+    df["win_pct_rank"] = df["win_pct"].rank(
+        method="min", ascending=False).astype(int)
+    df["power_rank"] = df["power_index"].rank(
+        method="min", ascending=False).astype(int)
     df["fifa_rank_inv"] = df["fifa_rank"].max() - df["fifa_rank"] + 1
     df["fifa_rank_score_norm"] = normalize(df["fifa_rank_inv"])
     return df
@@ -80,7 +230,8 @@ def summarize_executive(df: pd.DataFrame, team_df: pd.DataFrame, prob_df: pd.Dat
     total_matches = len(df)
     total_goals = int(df["total_goals"].sum())
     avg_goals = round(df["total_goals"].mean(), 2)
-    unique_teams = pd.unique(df[["home_team", "away_team"]].values.ravel()).tolist()
+    unique_teams = pd.unique(
+        df[["home_team", "away_team"]].values.ravel()).tolist()
     total_teams = len(unique_teams)
     home_wins = int(df["home_win_flag"].sum())
     away_wins = int(df["away_win_flag"].sum())
@@ -96,55 +247,84 @@ def summarize_executive(df: pd.DataFrame, team_df: pd.DataFrame, prob_df: pd.Dat
         .sort_values(ascending=False)
     )
     most_successful_team = champion_counts.index[0] if not champion_counts.empty else ""
-    most_successful_titles = int(champion_counts.iloc[0]) if not champion_counts.empty else 0
-    top_prob = prob_df.sort_values("championship_probability", ascending=False).head(1)
+    most_successful_titles = int(
+        champion_counts.iloc[0]) if not champion_counts.empty else 0
+    top_prob = prob_df.sort_values(
+        "championship_probability", ascending=False).head(1)
     top_prob_team = top_prob.iloc[0]["team"] if not top_prob.empty else ""
-    top_prob_value = float(top_prob.iloc[0]["championship_probability"]) if not top_prob.empty else 0.0
+    top_prob_value = float(
+        top_prob.iloc[0]["championship_probability"]) if not top_prob.empty else 0.0
     top_power = team_df.sort_values("power_index", ascending=False).head(1)
     top_power_team = top_power.iloc[0]["team"] if not top_power.empty else ""
-    top_power_value = round(float(top_power.iloc[0]["power_index"]), 2) if not top_power.empty else 0.0
-    top_5_power_avg = round(team_df.sort_values("power_index", ascending=False).head(5)["power_index"].mean(), 2)
-    top_10_prob_share = round(prob_df.head(10)["championship_probability"].sum(), 2)
+    top_power_value = round(
+        float(top_power.iloc[0]["power_index"]), 2) if not top_power.empty else 0.0
+    top_5_power_avg = round(team_df.sort_values(
+        "power_index", ascending=False).head(5)["power_index"].mean(), 2)
+    top_10_prob_share = round(prob_df.head(
+        10)["championship_probability"].sum(), 2)
     simulation_runs = None
     if not prob_df.empty and prob_df["championship_probability"].gt(0).any():
         candidate = prob_df.loc[prob_df["championship_probability"] > 0].iloc[0]
         if candidate["championship_probability"] > 0:
-            simulation_runs = int(round(candidate["champion_count"] / (candidate["championship_probability"] / 100)))
+            simulation_runs = int(round(
+                candidate["champion_count"] / (candidate["championship_probability"] / 100)))
     metrics.extend([
-        {"metric_name": "total_world_cup_tournaments", "value": total_years, "category": "Tournament", "description": "Unique World Cup editions represented in historical match data."},
-        {"metric_name": "total_world_cup_matches", "value": total_matches, "category": "Tournament", "description": "Total World Cup matches played across all editions."},
-        {"metric_name": "total_world_cup_goals", "value": total_goals, "category": "Match Analytics", "description": "Total goals scored in World Cup history."},
-        {"metric_name": "average_goals_per_match", "value": avg_goals, "category": "Match Analytics", "description": "Average number of goals scored per World Cup match."},
-        {"metric_name": "total_unique_teams", "value": total_teams, "category": "Teams", "description": "Unique national teams that have played in World Cup matches."},
-        {"metric_name": "average_attendance_per_match", "value": avg_attendance, "category": "Fan Experience", "description": "Average match attendance for World Cup matches."},
-        {"metric_name": "home_win_percentage", "value": round(home_wins / total_matches * 100, 2) if total_matches else 0.0, "category": "Match Analytics", "description": "Share of World Cup matches won by the home team."},
-        {"metric_name": "away_win_percentage", "value": round(away_wins / total_matches * 100, 2) if total_matches else 0.0, "category": "Match Analytics", "description": "Share of World Cup matches won by the away team."},
-        {"metric_name": "draw_percentage", "value": round(draws / total_matches * 100, 2) if total_matches else 0.0, "category": "Match Analytics", "description": "Share of World Cup matches ending in a draw."},
-        {"metric_name": "most_successful_team", "value": most_successful_team, "category": "Teams", "description": "Team with the most World Cup titles in the historical match record."},
-        {"metric_name": "most_successful_team_titles", "value": most_successful_titles, "category": "Teams", "description": "Number of World Cup titles won by the most successful team."},
-        {"metric_name": "top_champion_probability_team", "value": top_prob_team, "category": "Simulation", "description": "Team with the highest championship probability in the latest simulation output."},
-        {"metric_name": "top_champion_probability_percent", "value": top_prob_value, "category": "Simulation", "description": "Highest simulated championship probability percentage."},
-        {"metric_name": "top_power_index_team", "value": top_power_team, "category": "Power Index", "description": "Team with the highest computed World Cup Power Index."},
-        {"metric_name": "top_power_index_score", "value": top_power_value, "category": "Power Index", "description": "World Cup Power Index score of the top-ranked team."},
-        {"metric_name": "top_5_power_index_average", "value": top_5_power_avg, "category": "Power Index", "description": "Average Power Index score for the top 5 teams."},
-        {"metric_name": "top_10_championship_probability_share", "value": top_10_prob_share, "category": "Simulation", "description": "Combined championship probability percentage for the top 10 candidate teams."},
+        {"metric_name": "total_world_cup_tournaments", "value": total_years, "category": "Tournament",
+            "description": "Unique World Cup editions represented in historical match data."},
+        {"metric_name": "total_world_cup_matches", "value": total_matches, "category": "Tournament",
+            "description": "Total World Cup matches played across all editions."},
+        {"metric_name": "total_world_cup_goals", "value": total_goals,
+            "category": "Match Analytics", "description": "Total goals scored in World Cup history."},
+        {"metric_name": "average_goals_per_match", "value": avg_goals, "category": "Match Analytics",
+            "description": "Average number of goals scored per World Cup match."},
+        {"metric_name": "total_unique_teams", "value": total_teams, "category": "Teams",
+            "description": "Unique national teams that have played in World Cup matches."},
+        {"metric_name": "average_attendance_per_match", "value": avg_attendance,
+            "category": "Fan Experience", "description": "Average match attendance for World Cup matches."},
+        {"metric_name": "home_win_percentage", "value": round(home_wins / total_matches * 100, 2) if total_matches else 0.0,
+         "category": "Match Analytics", "description": "Share of World Cup matches won by the home team."},
+        {"metric_name": "away_win_percentage", "value": round(away_wins / total_matches * 100, 2) if total_matches else 0.0,
+         "category": "Match Analytics", "description": "Share of World Cup matches won by the away team."},
+        {"metric_name": "draw_percentage", "value": round(draws / total_matches * 100, 2) if total_matches else 0.0,
+         "category": "Match Analytics", "description": "Share of World Cup matches ending in a draw."},
+        {"metric_name": "most_successful_team", "value": most_successful_team, "category": "Teams",
+            "description": "Team with the most World Cup titles in the historical match record."},
+        {"metric_name": "most_successful_team_titles", "value": most_successful_titles, "category": "Teams",
+            "description": "Number of World Cup titles won by the most successful team."},
+        {"metric_name": "top_champion_probability_team", "value": top_prob_team, "category": "Simulation",
+            "description": "Team with the highest championship probability in the latest simulation output."},
+        {"metric_name": "top_champion_probability_percent", "value": top_prob_value,
+            "category": "Simulation", "description": "Highest simulated championship probability percentage."},
+        {"metric_name": "top_power_index_team", "value": top_power_team, "category": "Power Index",
+            "description": "Team with the highest computed World Cup Power Index."},
+        {"metric_name": "top_power_index_score", "value": top_power_value, "category": "Power Index",
+            "description": "World Cup Power Index score of the top-ranked team."},
+        {"metric_name": "top_5_power_index_average", "value": top_5_power_avg,
+            "category": "Power Index", "description": "Average Power Index score for the top 5 teams."},
+        {"metric_name": "top_10_championship_probability_share", "value": top_10_prob_share, "category": "Simulation",
+            "description": "Combined championship probability percentage for the top 10 candidate teams."},
     ])
     if simulation_runs is not None:
-        metrics.append({"metric_name": "simulation_runs", "value": simulation_runs, "category": "Simulation", "description": "Number of Monte Carlo tournament simulations implied by the probability output."})
+        metrics.append({"metric_name": "simulation_runs", "value": simulation_runs, "category": "Simulation",
+                       "description": "Number of Monte Carlo tournament simulations implied by the probability output."})
     return pd.DataFrame(metrics)
 
 
 def enrich_championship_probs(df: pd.DataFrame) -> pd.DataFrame:
     result = df.copy()
-    result["championship_probability"] = pd.to_numeric(result["championship_probability"], errors="coerce")
-    result["champion_count"] = pd.to_numeric(result["champion_count"], errors="coerce").fillna(0).astype(int)
+    result["championship_probability"] = pd.to_numeric(
+        result["championship_probability"], errors="coerce")
+    result["champion_count"] = pd.to_numeric(
+        result["champion_count"], errors="coerce").fillna(0).astype(int)
     if not result.empty and result["championship_probability"].gt(0).any():
         sample = result.loc[result["championship_probability"] > 0].iloc[0]
-        runs = int(round(sample["champion_count"] / (sample["championship_probability"] / 100)))
+        runs = int(round(sample["champion_count"] /
+                   (sample["championship_probability"] / 100)))
         result["simulation_runs"] = runs
     else:
         result["simulation_runs"] = np.nan
-    result["probability_rank"] = result["championship_probability"].rank(method="min", ascending=False).astype(int)
+    result["probability_rank"] = result["championship_probability"].rank(
+        method="min", ascending=False).astype(int)
     result["top_10_flag"] = result["probability_rank"] <= 10
     result["championship_probability_share"] = result["championship_probability"] / 100
     return result
@@ -152,13 +332,18 @@ def enrich_championship_probs(df: pd.DataFrame) -> pd.DataFrame:
 
 def enrich_feature_importance(df: pd.DataFrame) -> pd.DataFrame:
     result = df.copy()
-    result["importance"] = pd.to_numeric(result["importance"], errors="coerce").fillna(0.0)
-    result["importance_rank"] = result["importance"].rank(method="min", ascending=False).astype(int)
+    result["importance"] = pd.to_numeric(
+        result["importance"], errors="coerce").fillna(0.0)
+    result["importance_rank"] = result["importance"].rank(
+        method="min", ascending=False).astype(int)
     total = result["importance"].sum()
-    result["importance_pct"] = round(result["importance"] / total * 100, 2) if total else 0.0
+    result["importance_pct"] = round(
+        result["importance"] / total * 100, 2) if total else 0.0
     result["importance_norm"] = normalize(result["importance"])
-    result["feature_group"] = result["feature"].apply(lambda x: categorize_feature(x))
-    result["description"] = result["feature"].apply(lambda x: feature_description(x))
+    result["feature_group"] = result["feature"].apply(
+        lambda x: categorize_feature(x))
+    result["description"] = result["feature"].apply(
+        lambda x: feature_description(x))
     return result
 
 
@@ -213,23 +398,30 @@ def feature_description(feature: str) -> str:
 
 def build_historical_match_summary(df: pd.DataFrame) -> pd.DataFrame:
     result = df.copy()
-    result["home_goals"] = pd.to_numeric(result["home_goals"], errors="coerce").fillna(0).astype(int)
-    result["away_goals"] = pd.to_numeric(result["away_goals"], errors="coerce").fillna(0).astype(int)
+    result["home_goals"] = pd.to_numeric(
+        result["home_goals"], errors="coerce").fillna(0).astype(int)
+    result["away_goals"] = pd.to_numeric(
+        result["away_goals"], errors="coerce").fillna(0).astype(int)
     result["total_goals"] = result["home_goals"] + result["away_goals"]
-    result["goal_difference"] = (result["home_goals"] - result["away_goals"]).abs()
+    result["goal_difference"] = (
+        result["home_goals"] - result["away_goals"]).abs()
     result["match_date"] = pd.to_datetime(
-        result["Datetime"].astype(str).str.extract(r"^(\d{1,2} [A-Za-z]+ \d{4})")[0],
+        result["Datetime"].astype(str).str.extract(
+            r"^(\d{1,2} [A-Za-z]+ \d{4})")[0],
         format="%d %b %Y",
         errors="coerce",
     )
-    result["match_time"] = result["Datetime"].astype(str).str.extract(r"-\s*(.+)$")[0].fillna("")
-    result["scoreline"] = result["home_goals"].astype(str) + "-" + result["away_goals"].astype(str)
+    result["match_time"] = result["Datetime"].astype(
+        str).str.extract(r"-\s*(.+)$")[0].fillna("")
+    result["scoreline"] = result["home_goals"].astype(
+        str) + "-" + result["away_goals"].astype(str)
     result["winner_team"] = np.where(
         result["result"] == "home_win",
         result["home_team"],
         np.where(result["result"] == "away_win", result["away_team"], "Draw"),
     )
-    result["margin_of_victory"] = np.where(result["result"] == "draw", 0, result["goal_difference"])
+    result["margin_of_victory"] = np.where(
+        result["result"] == "draw", 0, result["goal_difference"])
     result["home_win_flag"] = (result["result"] == "home_win").astype(int)
     result["away_win_flag"] = (result["result"] == "away_win").astype(int)
     result["draw_flag"] = (result["result"] == "draw").astype(int)
@@ -281,8 +473,10 @@ def build_tournament_statistics(df: pd.DataFrame) -> pd.DataFrame:
             home_wins=("home_win_flag", "sum"),
             away_wins=("away_win_flag", "sum"),
             draws=("draw_flag", "sum"),
-            avg_attendance=("Attendance", lambda x: round(pd.to_numeric(x, errors="coerce").dropna().mean() or 0.0, 0)),
-            total_attendance=("Attendance", lambda x: pd.to_numeric(x, errors="coerce").dropna().sum()),
+            avg_attendance=("Attendance", lambda x: round(
+                pd.to_numeric(x, errors="coerce").dropna().mean() or 0.0, 0)),
+            total_attendance=("Attendance", lambda x: pd.to_numeric(
+                x, errors="coerce").dropna().sum()),
             average_margin=("margin_of_victory", "mean"),
         )
         .reset_index()
@@ -298,8 +492,10 @@ def build_tournament_statistics(df: pd.DataFrame) -> pd.DataFrame:
             home_wins=("home_win_flag", "sum"),
             away_wins=("away_win_flag", "sum"),
             draws=("draw_flag", "sum"),
-            avg_attendance=("Attendance", lambda x: round(pd.to_numeric(x, errors="coerce").dropna().mean() or 0.0, 0)),
-            total_attendance=("Attendance", lambda x: pd.to_numeric(x, errors="coerce").dropna().sum()),
+            avg_attendance=("Attendance", lambda x: round(
+                pd.to_numeric(x, errors="coerce").dropna().mean() or 0.0, 0)),
+            total_attendance=("Attendance", lambda x: pd.to_numeric(
+                x, errors="coerce").dropna().sum()),
             average_margin=("margin_of_victory", "mean"),
         )
         .reset_index()
@@ -330,26 +526,48 @@ def main():
     feature_importance = pd.read_csv(FEATURE_IMPORTANCE_PATH)
     world_matches = pd.read_csv(WORLD_CUP_MATCHES_PATH)
 
-    team_rankings_export = compute_power_index(team_rankings, championship_probs)
-    team_rankings_export = team_rankings_export.sort_values("power_index", ascending=False)
+    team_rankings_export = compute_power_index(
+        team_rankings, championship_probs)
+    team_rankings_export = team_rankings_export.sort_values(
+        "power_index", ascending=False)
     team_rankings_export.to_csv(OUTPUT_DIR / "team_rankings.csv", index=False)
 
+    canonical_map = build_canonical_team_map()
+    dashboard_rankings = filter_dashboard_teams(team_rankings, canonical_map)
+    dashboard_rankings_export = compute_power_index(
+        dashboard_rankings, championship_probs)
+    dashboard_rankings_export = dashboard_rankings_export.sort_values(
+        "power_index", ascending=False)
+    dashboard_rankings_export.to_csv(TEAM_RANKINGS_DASHBOARD_PATH, index=False)
+
+    dashboard_metadata = build_dashboard_metadata(
+        dashboard_rankings_export, championship_probs)
+    dashboard_metadata.to_csv(DASHBOARD_METADATA_PATH, index=False)
+
     championship_probs_export = enrich_championship_probs(championship_probs)
-    championship_probs_export = championship_probs_export.sort_values("championship_probability", ascending=False)
-    championship_probs_export.to_csv(OUTPUT_DIR / "championship_probabilities.csv", index=False)
+    championship_probs_export = championship_probs_export.sort_values(
+        "championship_probability", ascending=False)
+    championship_probs_export.to_csv(
+        OUTPUT_DIR / "championship_probabilities.csv", index=False)
 
     feature_importance_export = enrich_feature_importance(feature_importance)
-    feature_importance_export = feature_importance_export.sort_values("importance", ascending=False)
-    feature_importance_export.to_csv(OUTPUT_DIR / "feature_importance.csv", index=False)
+    feature_importance_export = feature_importance_export.sort_values(
+        "importance", ascending=False)
+    feature_importance_export.to_csv(
+        OUTPUT_DIR / "feature_importance.csv", index=False)
 
     match_summary_export = build_historical_match_summary(world_matches)
-    match_summary_export.to_csv(OUTPUT_DIR / "historical_match_summary.csv", index=False)
+    match_summary_export.to_csv(
+        OUTPUT_DIR / "historical_match_summary.csv", index=False)
 
     tournament_stats_export = build_tournament_statistics(world_matches)
-    tournament_stats_export.to_csv(OUTPUT_DIR / "tournament_statistics.csv", index=False)
+    tournament_stats_export.to_csv(
+        OUTPUT_DIR / "tournament_statistics.csv", index=False)
 
-    executive_summary_export = summarize_executive(match_summary_export, team_rankings_export, championship_probs_export)
-    executive_summary_export.to_csv(OUTPUT_DIR / "executive_summary.csv", index=False)
+    executive_summary_export = summarize_executive(
+        match_summary_export, team_rankings_export, championship_probs_export)
+    executive_summary_export.to_csv(
+        OUTPUT_DIR / "executive_summary.csv", index=False)
 
     data_dictionary = build_data_dictionary({
         "executive_summary": [
@@ -369,18 +587,42 @@ def main():
             ("avg_goals_conceded", "numeric", "Average goals conceded."),
             ("player_strength", "numeric", "Average player strength."),
             ("team_strength_score", "numeric", "Composite team strength score."),
-            ("championship_probability", "numeric", "Simulated championship probability percentage."),
+            ("championship_probability", "numeric",
+             "Simulated championship probability percentage."),
             ("power_index", "numeric", "Computed World Cup Power Index score."),
             ("power_rank", "numeric", "Rank by power index."),
+        ],
+        "team_rankings_dashboard": [
+            ("team", "string", "Modern FIFA-recognized national team name."),
+            ("elo", "numeric", "ELO rating for the team."),
+            ("form", "numeric", "Recent form score."),
+            ("fifa_rank", "numeric", "FIFA ranking position."),
+            ("fifa_points", "numeric", "FIFA ranking points."),
+            ("win_pct", "numeric", "Win percentage."),
+            ("avg_goals_scored", "numeric", "Average goals scored."),
+            ("avg_goals_conceded", "numeric", "Average goals conceded."),
+            ("player_strength", "numeric", "Average player strength."),
+            ("team_strength_score", "numeric", "Composite team strength score."),
+            ("championship_probability", "numeric",
+             "Simulated championship probability percentage."),
+            ("power_index", "numeric", "Computed World Cup Power Index score."),
+            ("power_rank", "numeric", "Rank by power index."),
+        ],
+        "dashboard_metadata": [
+            ("metric_name", "string", "Metadata metric identifier."),
+            ("value", "string", "Metric value for dashboard filtering and labels."),
+            ("description", "string", "Human-readable description of the metadata item."),
         ],
         "championship_probabilities": [
             ("team", "string", "National team name."),
             ("champion_count", "numeric", "Monte Carlo champion selection count."),
-            ("championship_probability", "numeric", "Champion probability percentage."),
+            ("championship_probability", "numeric",
+             "Champion probability percentage."),
             ("simulation_runs", "numeric", "Inferred number of simulations."),
             ("probability_rank", "numeric", "Rank by championship probability."),
             ("top_10_flag", "boolean", "Indicates top 10 forecasted teams."),
-            ("championship_probability_share", "numeric", "Champion probability as a fraction."),
+            ("championship_probability_share", "numeric",
+             "Champion probability as a fraction."),
         ],
         "feature_importance": [
             ("feature", "string", "Model feature name."),

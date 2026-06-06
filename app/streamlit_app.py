@@ -10,6 +10,7 @@ import streamlit as st
 
 BASE_DIR = Path(__file__).resolve().parents[1]
 DASHBOARD_DIR = BASE_DIR / "dashboard"
+POWERBI_DIR = BASE_DIR / "powerbi_exports"
 FEATURE_STORE = BASE_DIR / "data" / "feature_store"
 MODEL_PATH = BASE_DIR / "models" / "best_model.pkl"
 
@@ -161,12 +162,16 @@ def read_csv(path: Path) -> pd.DataFrame:
 
 @st.cache_data
 def load_lookup_tables():
+    team_rankings_path = POWERBI_DIR / "team_rankings_dashboard.csv"
+    if not team_rankings_path.exists():
+        team_rankings_path = DASHBOARD_DIR / "team_rankings.csv"
+
     return {
         "elo": read_csv(FEATURE_STORE / "elo_ratings.csv"),
         "form": read_csv(FEATURE_STORE / "team_form.csv"),
         "rank": read_csv(FEATURE_STORE / "fifa_rankings_latest.csv"),
         "profiles": read_csv(FEATURE_STORE / "team_profiles.csv"),
-        "team_rankings": read_csv(DASHBOARD_DIR / "team_rankings.csv"),
+        "team_rankings": read_csv(team_rankings_path),
     }
 
 
