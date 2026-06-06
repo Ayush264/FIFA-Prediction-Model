@@ -158,20 +158,20 @@ def evaluate_model(name: str, model, X_train, X_test, y_train, y_test) -> dict:
 
     return {
         "model_name": name,
-        "accuracy": round(acc, 4),
-        "f1_macro": round(f1_macro, 4),
-        "f1_weighted": round(f1_weighted, 4),
+        "accuracy": round(float(acc), 4),
+        "f1_macro": round(float(f1_macro), 4),
+        "f1_weighted": round(float(f1_weighted), 4),
         "confusion_matrix": cm,
         "classification_report": report,
     }
 
 
-def model_importance(model):
+def model_importance(model) -> np.ndarray | None:
     if hasattr(model, "feature_importances_"):
         return model.feature_importances_
     if isinstance(model, Pipeline):
         clf = model.named_steps.get("clf")
-        if hasattr(clf, "feature_importances_"):
+        if clf is not None and hasattr(clf, "feature_importances_"):
             return clf.feature_importances_
     return None
 
