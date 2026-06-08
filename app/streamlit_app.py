@@ -81,50 +81,23 @@ html, body, [data-testid="stAppViewContainer"] {
     background: radial-gradient(ellipse at 10% 0%, #0d2060 0%, #081229 50%, #020a1a 100%) !important;
 }
 
-/* ── HIDE STREAMLIT UI ───────────────────── */
+/* ── HIDE STREAMLIT CHROME ───────────────── */
 #MainMenu, footer,
 [data-testid="stToolbar"],
 [data-testid="stDecoration"],
 .stDeployButton { display: none !important; }
 
-/* Keep the header alive so the sidebar can be reopened after collapsing */
+/* The app no longer depends on Streamlit's native sidebar toggle for navigation.
+   This avoids the desktop/mobile bug where Streamlit's collapsed-sidebar button
+   disappears in some browser/version combinations. */
 header[data-testid="stHeader"] {
     background: transparent !important;
-    height: 3rem !important;
-    overflow: visible !important;
-    z-index: 9999 !important;
-}
-header[data-testid="stHeader"] [data-testid="collapsedControl"] {
-    position: fixed !important;
-    top: 0.85rem !important;
-    left: 0.85rem !important;
-    z-index: 10000 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-    border-radius: 999px !important;
-    background: rgba(8, 18, 41, 0.9) !important;
-    border: 1px solid rgba(255, 215, 0, 0.25) !important;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
-}
-header[data-testid="stHeader"] [data-testid="collapsedControl"] button {
-    width: 100% !important;
-    height: 100% !important;
-    border-radius: 999px !important;
-    color: var(--gold) !important;
-    background: transparent !important;
-}
-header[data-testid="stHeader"] [data-testid="collapsedControl"] svg {
-    width: 1.15rem !important;
-    height: 1.15rem !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    visibility: hidden !important;
 }
 
-/* ── SIDEBAR ─────────────────────────────── */
+/* If the native sidebar is opened by Streamlit/browser state, keep it harmless. */
 [data-testid="stSidebar"] {
     background: linear-gradient(180deg, #0a1628 0%, #060e1e 100%) !important;
     border-right: 1px solid var(--border) !important;
@@ -376,17 +349,37 @@ header[data-testid="stHeader"] [data-testid="collapsedControl"] svg {
     margin: 3px;
 }
 
-/* ── SIDEBAR NAV ─────────────────────────── */
-.sidebar-logo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.6rem;
-    letter-spacing: 3px;
-    background: linear-gradient(135deg, #FFD700, #00A8FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-    padding: 1rem 0 0.5rem;
+/* ── APP NAVIGATION ───────────────────────── */
+.global-nav-card {
+    background: linear-gradient(135deg, rgba(13,31,74,0.9), rgba(3,8,15,0.88));
+    border: 1px solid rgba(255,215,0,0.22);
+    border-radius: 14px;
+    padding: 0.9rem 1.1rem;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.28);
+}
+.global-nav-eyebrow {
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+.global-nav-copy {
+    color: var(--grey);
+    font-size: 0.86rem;
+}
+div[data-baseweb="select"] > div {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,215,0,0.22) !important;
+    border-radius: 12px !important;
+    min-height: 48px !important;
+}
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] input {
+    color: var(--white) !important;
+    font-weight: 700 !important;
 }
 
 /* ── PLOTLY THEME ────────────────────────── */
@@ -484,6 +477,17 @@ hr {
 .confed-CONCACAF { background: rgba(255,120,0,0.2); color: #ffb070; border: 1px solid rgba(255,120,0,0.3); }
 .confed-AFC    { background: rgba(255,0,100,0.15); color: #ff88bb; border: 1px solid rgba(255,0,100,0.2); }
 .confed-CAF    { background: rgba(180,120,0,0.2); color: #ffd060; border: 1px solid rgba(180,120,0,0.3); }
+
+/* ── RESPONSIVE / MOBILE ─────────────────── */
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: 0.8rem 0.85rem 2rem !important;
+    }
+    .global-nav-card { padding: 0.8rem 0.9rem !important; }
+    .hero-banner { padding: 1.35rem 1.1rem !important; border-radius: 14px !important; }
+    .hero-title  { font-size: 2.05rem !important; letter-spacing: 1.5px !important; }
+    .hero-subtitle { font-size: 0.9rem !important; }
+}
 </style>
 """, unsafe_allow_html=True)
 
@@ -946,7 +950,8 @@ def page_executive(tables, rankings):
                             colorscale=[[0, "#003377"], [1, "#00A8FF"]], showscale=False),
                 hovertemplate="<b>%{y}</b><br>Power Index: %{x:.1f}<extra></extra>"
             ))
-            apply_plotly_layout(fig2, yaxis=dict(autorange="reversed"), xaxis_title="Power Index")
+            apply_plotly_layout(fig2, yaxis=dict(
+                autorange="reversed"), xaxis_title="Power Index")
             st.plotly_chart(fig2, use_container_width=True)
         with c2:
             section_title("🌍", "ELO vs", "CHAMPIONSHIP PROBABILITY")
@@ -959,7 +964,8 @@ def page_executive(tables, rankings):
             )
             fig3.update_traces(opacity=0.85, marker=dict(
                 line=dict(width=1, color="rgba(255,255,255,0.2)")))
-            apply_plotly_layout(fig3, xaxis_title="ELO Rating", yaxis_title="Championship %")
+            apply_plotly_layout(fig3, xaxis_title="ELO Rating",
+                                yaxis_title="Championship %")
             st.plotly_chart(fig3, use_container_width=True)
 
         # ── Auto insights ──
@@ -1505,7 +1511,8 @@ def page_simulation(tables, rankings):
         )
         fig2.update_traces(textposition="top center", textfont=dict(color="#8899aa", size=9),
                            marker=dict(opacity=0.8, line=dict(width=1, color="rgba(255,255,255,0.15)")))
-        apply_plotly_layout(fig2, xaxis_title="Power Index", yaxis_title="Championship Probability (%)")
+        apply_plotly_layout(fig2, xaxis_title="Power Index",
+                            yaxis_title="Championship Probability (%)")
         st.plotly_chart(fig2, use_container_width=True)
 
     # ── Download ──
@@ -1561,7 +1568,8 @@ def page_model(tables, rankings):
             text=[f"{v:.1f}" for v in y], textposition="outside",
             textfont=dict(color="#8899aa", size=10)
         ))
-    apply_plotly_layout(fig, barmode="group", yaxis_title="Score (%)", legend=dict(font=dict(color="#ffffff")))
+    apply_plotly_layout(fig, barmode="group", yaxis_title="Score (%)", legend=dict(
+        font=dict(color="#ffffff")))
     st.plotly_chart(fig, use_container_width=True)
 
     # ── Feature importance ──
@@ -1575,16 +1583,19 @@ def page_model(tables, rankings):
                 x=top["importance"], y=top["feature"], orientation="h",
                 marker=dict(
                     color=top["importance"],
-                    colorscale=[[0, "#002255"], [0.5, "#0055aa"], [1, "#FFD700"]],
+                    colorscale=[[0, "#002255"], [
+                        0.5, "#0055aa"], [1, "#FFD700"]],
                     showscale=True,
                     colorbar=dict(
-                        title=dict(text="Importance", font=dict(color="#8899aa")),
+                        title=dict(text="Importance",
+                                   font=dict(color="#8899aa")),
                         tickfont=dict(color="#8899aa"),
                     ),
                 ),
                 hovertemplate="<b>%{y}</b><br>Importance: %{x:.4f}<extra></extra>"
             ))
-            apply_plotly_layout(fig2, xaxis_title="Feature Importance", height=600)
+            apply_plotly_layout(
+                fig2, xaxis_title="Feature Importance", height=600)
             st.plotly_chart(fig2, use_container_width=True)
         except Exception as e:
             st.warning(f"Feature importance chart could not be rendered: {e}")
@@ -1797,7 +1808,8 @@ def page_team_rankings(tables, rankings):
                 "fifa_rank").head(15)
             fig = go.Figure(go.Bar(x=top["team"], y=top["fifa_rank"],
                                    marker=dict(color=top["fifa_rank"], colorscale=[[0, "#FFD700"], [1, "#aa7700"]], showscale=False)))
-            apply_plotly_layout(fig, title_text="BEST FIFA RANKINGS", yaxis=dict(autorange="reversed"))
+            apply_plotly_layout(
+                fig, title_text="BEST FIFA RANKINGS", yaxis=dict(autorange="reversed"))
             st.plotly_chart(fig, use_container_width=True)
     with chart_cols[2]:
         if "form" in rankings.columns:
@@ -1812,50 +1824,39 @@ def page_team_rankings(tables, rankings):
 # ─────────────────────────────────────────────
 
 
+NAV_OPTIONS = [
+    "🏠  Executive Dashboard", "🤖  Match Predictor",
+    "🌍  Team Intelligence", "🏆  WC Simulation",
+    "🧠  Model Explainability", "🏅  Team Rankings", "📖  About",
+]
+
+
 def sidebar_nav():
-    with st.sidebar:
-        st.markdown('<div class="sidebar-logo">⚽ FIFA WC 2026</div>',
-                    unsafe_allow_html=True)
-        st.markdown("""<div style="text-align:center;color:#556677;font-size:0.72rem;
-                    letter-spacing:1.5px;text-transform:uppercase;margin-bottom:1.5rem;
-                    padding-bottom:1rem;border-bottom:1px solid rgba(255,215,0,0.1)">
-            Intelligence Platform</div>""", unsafe_allow_html=True)
+    """Render reliable in-page navigation.
 
-        page = st.radio(
-            "Navigation",
-            ["🏠  Executive Dashboard", "🤖  Match Predictor",
-             "🌍  Team Intelligence", "🏆  WC Simulation",
-             "🧠  Model Explainability", "🏅  Team Rankings", "📖  About"],
-            label_visibility="collapsed"
-        )
-        st.markdown("<br>", unsafe_allow_html=True)
+    Streamlit's native sidebar collapse/reopen button is controlled by frontend
+    internals that changed across versions and browsers. For a public launch,
+    the safest fix is to put navigation in the main app so it is always visible
+    on desktop and mobile, even if the native sidebar is collapsed or hidden.
+    """
+    current = st.session_state.get("nav_page", NAV_OPTIONS[0])
+    if current not in NAV_OPTIONS:
+        current = NAV_OPTIONS[0]
 
-        # File status
-        status_items = [
-            ("ELO Ratings",        FEATURE_STORE / "elo_ratings.csv"),
-            ("Team Form",          FEATURE_STORE / "team_form.csv"),
-            ("FIFA Rankings",      FEATURE_STORE / "fifa_rankings_latest.csv"),
-            ("Team Profiles",      FEATURE_STORE / "team_profiles.csv"),
-            ("Championship Probs", DASHBOARD_DIR /
-             "championship_probabilities.csv"),
-            ("Best Model",         MODEL_PATH),
-        ]
-        st.markdown("""<div style="color:var(--grey);font-size:0.7rem;letter-spacing:1.5px;
-                    text-transform:uppercase;margin-bottom:0.5rem">DATA STATUS</div>""",
-                    unsafe_allow_html=True)
-        for label, path in status_items:
-            ok = path.exists()
-            icon = "🟢" if ok else "🔴"
-            st.markdown(f"<div style='font-size:0.78rem;color:{'#88cc88' if ok else '#cc6666'};margin:2px 0'>{icon} {label}</div>",
-                        unsafe_allow_html=True)
+    st.markdown("""
+    <div class="global-nav-card">
+        <div class="global-nav-eyebrow">⚽ FIFA WC 2026 Intelligence Platform</div>
+        <div class="global-nav-copy">Choose a module below and dive into Analytics.</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-        st.markdown("<br>", unsafe_allow_html=True)
-        st.markdown("""<div style="color:#334455;font-size:0.7rem;text-align:center">
-            Built by Ayush · Chandigarh University<br>
-            <a href="https://github.com/Ayush264/FIFA-Prediction-Model"
-               style="color:#445566;text-decoration:none">github.com/Ayush264</a>
-        </div>""", unsafe_allow_html=True)
-
+    page = st.selectbox(
+        "Choose dashboard page",
+        NAV_OPTIONS,
+        index=NAV_OPTIONS.index(current),
+        key="nav_page",
+        label_visibility="collapsed",
+    )
     return page
 
 # ─────────────────────────────────────────────
@@ -1864,52 +1865,8 @@ def sidebar_nav():
 
 
 def main():
-    if "sidebar_open" not in st.session_state:
-        st.session_state.sidebar_open = True
-
-    toggle_label = "☰ Menu" if not st.session_state.sidebar_open else "✕ Sidebar"
-    if st.button(toggle_label, key="sidebar_toggle", help="Show or hide the sidebar"):
-        st.session_state.sidebar_open = not st.session_state.sidebar_open
-        st.rerun()
-
-    if st.session_state.sidebar_open:
-        st.markdown(
-            """
-            <style>
-            [data-testid="stSidebar"] {
-                transform: translateX(0) !important;
-                width: 21rem !important;
-                min-width: 21rem !important;
-                max-width: 21rem !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
-    else:
-        st.markdown(
-            """
-            <style>
-            [data-testid="stSidebar"] {
-                transform: translateX(-100%) !important;
-                width: 0 !important;
-                min-width: 0 !important;
-                max-width: 0 !important;
-                overflow: hidden !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                border: 0 !important;
-            }
-            [data-testid="stSidebar"] * {
-                visibility: hidden !important;
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
-
+    # In-page navigation is intentionally used instead of Streamlit's native
+    # sidebar toggle so the published app remains usable on desktop and mobile.
     page = sidebar_nav()
 
     tables = load_tables()
