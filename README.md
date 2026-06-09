@@ -1,5 +1,5 @@
 # ⚽ FIFA World Cup 2026 Prediction Platform
-
+Live Link : https://fifa-prediction-model.streamlit.app/
 GitHub: https://github.com/Ayush264/FIFA-Prediction-Model
 
 An end-to-end machine learning platform to predict the FIFA World Cup 2026 winner using PySpark ETL pipelines, XGBoost, MLflow tracking, Power BI exports, and Monte Carlo simulation.
